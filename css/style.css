@@ -91,11 +91,56 @@ body::after {
       margin-bottom: 30px; }
     #visual .inner a {
       display: block;
-      width: 200px;
+      width: 150px;
       height: 40px;
       font: 18px/40px 'lora';
       border: 1px solid #262223;
       text-align: center;
       color: #262223; }
+
+/*----- bestSellers --------------------------------------------------- */
+#bestSellers {
+  width: 100%;
+  padding: 180px 0;
+  background: #F2EDD7; }
+  #bestSellers .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #bestSellers .inner .txt {
+      width: 230px;
+      padding: 50px 0; }
+      #bestSellers .inner .txt h1 {
+        font: normal 36px/1 'lora';
+        margin-bottom: 10px;
+        letter-spacing: 2px; }
+      #bestSellers .inner .txt p {
+        font: normal 12px/1.2 'lora';
+        letter-spacing: 2px;
+        margin-bottom: 30px; }
+      #bestSellers .inner .txt a {
+        display: block;
+        width: 120px;
+        height: 40px;
+        font: 16px/40px 'lora';
+        border: 1px solid #262223;
+        text-align: center;
+        color: #262223; }
+    #bestSellers .inner .con {
+      position: absolute;
+      top: 0;
+      right: -400px; }
+      #bestSellers .inner .con .wrap {
+        display: flex; }
+        #bestSellers .inner .con .wrap article {
+          width: 380px;
+          height: 300px;
+          margin-right: 20px; }
+          #bestSellers .inner .con .wrap article:last-child {
+            margin-right: 0; }
+          #bestSellers .inner .con .wrap article .pic {
+            width: 100%;
+            height: 100%;
+            background: #CCD1B6; }
 
 /*# sourceMappingURL=style.css.map */

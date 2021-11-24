@@ -43,7 +43,7 @@ body::after{content: ""; display: block; clear: both;}
 
             &:hover{
               background: $hover;
-              color: $base;
+              color: $base; 
             }
           }
         }
@@ -93,9 +93,63 @@ body::after{content: ""; display: block; clear: both;}
         margin-bottom: 30px;
       }
       a{
-        display: block; width: 200px; height: 40px;
+        display: block; width: 150px; height: 40px;
         font: 18px/40px 'lora';
         border: 1px solid $txt; text-align: center; color: $txt;
       }
+  }
+}
+/*----- bestSellers --------------------------------------------------- */
+
+#bestSellers{
+  width: 100%;
+  padding: 180px 0;
+  background: $base;
+
+  .inner{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+
+    .txt{
+      width: 230px; 
+      padding: 50px 0;
+
+      h1{
+        font: normal 36px/1 'lora';
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+      }
+      p{
+        font: normal 12px/1.2 'lora';
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+      }
+      a{
+        display: block;
+        width: 120px; height: 40px;
+        font: 16px/40px 'lora';
+        border: 1px solid $txt; text-align: center; color: $txt;
+      }
+    }
+    .con{
+      position: absolute; top: 0; right: -400px;
+
+
+      .wrap{
+        display: flex;
+
+        article{
+          width: 380px; height: 300px;
+          margin-right: 20px;
+
+          &:last-child{ margin-right: 0;}
+          .pic{
+            width: 100%; height: 100%;
+            background: $core;
+          }
+        }
+      }
+    }
   }
 }
