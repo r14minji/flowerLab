@@ -10,10 +10,18 @@ ul, ol, li {
 a {
   text-decoration: none; }
 
+/* ----- header ---------------------------------------------------------*/
+body::after {
+  content: "";
+  display: block;
+  clear: both; }
+
 #header {
   width: 100%;
-  position: relative;
-  z-index: 2; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3; }
   #header .inner {
     width: 1180px;
     height: 80px;
@@ -59,5 +67,35 @@ a {
             color: #F2EDD7; }
     #header .inner .btnCall, #header .inner .menuMo {
       display: none; }
+
+/* ----- visual ---------------------------------------------------------*/
+#visual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden; }
+  #visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  #visual .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    #visual .inner h1 {
+      font: 65px/1.2 'lora';
+      color: #262223;
+      margin-bottom: 30px; }
+    #visual .inner a {
+      display: block;
+      width: 200px;
+      height: 40px;
+      font: 18px/40px 'lora';
+      border: 1px solid #262223;
+      text-align: center;
+      color: #262223; }
 
 /*# sourceMappingURL=style.css.map */
