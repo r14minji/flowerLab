@@ -155,7 +155,7 @@ $txt : #262223;
 #banner{
   width: 100%;
   padding: 120px 0;
-  background: url(../img/banner2.jpg) no-repeat center/cover fixed;
+  background: url(../img/banner6.jpg) no-repeat center/cover fixed;
 
   .inner{
     width: 1180px;
@@ -178,6 +178,54 @@ $txt : #262223;
       width: 120px; height: 40px;
       font: 16px/40px 'lora';
       border: 1px solid $txt; text-align: center; color: $txt;
+    }
+  }
+}
+/*----- brand ------------------------------------------------------------*/
+#brand{
+  width: 100%;
+  background: $base;
+  padding: 180px 0;
+
+  .inner{
+    width: 1180px; 
+    margin: 0 auto;
+    position: relative;
+
+    .brandTxt{
+      width: 680px; height: 480px;
+      background: $core;
+      padding: 100px 250px 0 50px;
+
+      h1{
+        font: normal 36px/1 'lora';
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+      p{
+        font: normal 12px/1.2 'lora';
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+      }
+      a{
+        display: inline-block;
+        width: 120px; height: 40px;
+        font: 16px/40px 'lora';
+        border: 1px solid $txt; text-align: center; color: $txt;
+      }
+    }
+
+    .brandPic{
+      width: 680px; height: 400px;
+      background: $hover;
+      position: absolute;
+      top: 8%; right: 0;
+
+      img{
+        width: 100%; height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+      }
     }
   }
 }
