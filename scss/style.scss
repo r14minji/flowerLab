@@ -229,3 +229,29 @@ $txt : #262223;
     }
   }
 }
+/*----- story -------------------------------------------------------------*/
+#story{
+  width: 100%;
+  padding: 120px;
+  background: url(../img/banner4.jpg) no-repeat center/cover;
+
+  .inner{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+
+    p{
+      font: normal 36px/1.2 'lora';
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    a{
+      display: block;
+      margin: 0 auto;
+      width: 120px; height: 40px;
+      font: 16px/40px 'lora';
+      border: 1px solid $txt; text-align: center; color: $txt;
+    }
+  }
+}

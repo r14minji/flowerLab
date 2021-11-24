@@ -208,4 +208,28 @@ a {
         object-fit: cover;
         overflow: hidden; }
 
+/*----- story -------------------------------------------------------------*/
+#story {
+  width: 100%;
+  padding: 120px;
+  background: url(../img/banner4.jpg) no-repeat center/cover; }
+  #story .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #story .inner p {
+      font: normal 36px/1.2 'lora';
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+      text-align: center; }
+    #story .inner a {
+      display: block;
+      margin: 0 auto;
+      width: 120px;
+      height: 40px;
+      font: 16px/40px 'lora';
+      border: 1px solid #262223;
+      text-align: center;
+      color: #262223; }
+
 /*# sourceMappingURL=style.css.map */
