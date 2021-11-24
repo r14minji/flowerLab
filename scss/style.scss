@@ -1,0 +1,70 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+
+@import 'reset.scss';
+
+$base: #F2EDD7;
+$core: #CCD1B6;
+$hover: #FFB799;
+$txt : #262223;
+
+#header{
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  .inner{
+    width: 1180px;  height: 80px;
+    margin: 0 auto;
+    position: relative;
+    >h1{
+      position: absolute; top: 50%; left: 0; transform: translateY(-50%);
+      
+      >a{
+        font: bold 20px/1 'lora';
+        color: $txt;
+      }
+    }
+
+    .menuWeb{
+      #gnb{
+        position: absolute; top: 50%; right: 200px; transform: translateY(-50%);
+        >li{
+          float: left;
+
+          >a{
+            display: inline-block;
+            padding: 10px 20px;
+            font: 14px/1 'lora';
+            color: $txt;
+
+            &:hover{
+              background: $hover;
+              color: $base;
+            }
+          }
+        }
+      }
+      #util{
+        position: absolute; top: 50%; right: 0px; transform: translateY(-50%);
+        >li{
+          float:left;
+          >a{
+            display: inline-block;
+            padding: 10px;
+            font: 14px/1 'lora';
+            color: $txt;
+
+            &:hover{
+              background: $hover;
+              color: $base;
+            }
+          }
+        }
+      }
+    }
+
+    .btnCall, .menuMo{display: none;}
+  }
+}
