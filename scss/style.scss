@@ -10,7 +10,6 @@ $hover: #FFB799;
 $txt : #262223;
 
 /* ----- header ---------------------------------------------------------*/
-body::after{content: ""; display: block; clear: both;}
 #header{
   width: 100%;
   //border-bottom: 1px solid $hover;
@@ -100,7 +99,6 @@ body::after{content: ""; display: block; clear: both;}
   }
 }
 /*----- bestSellers --------------------------------------------------- */
-
 #bestSellers{
   width: 100%;
   padding: 180px 0;
@@ -150,6 +148,36 @@ body::after{content: ""; display: block; clear: both;}
           }
         }
       }
+    }
+  }
+}
+/*----- learnMore --------------------------------------------------------*/
+#banner{
+  width: 100%;
+  padding: 120px 0;
+  background: url(../img/banner2.jpg) no-repeat center/cover fixed;
+
+  .inner{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+    text-align: right;
+
+    h1{
+        font: normal 36px/1 'lora';
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+    p{
+      font: normal 12px/1.2 'lora';
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+    a{
+      display: inline-block;
+      width: 120px; height: 40px;
+      font: 16px/40px 'lora';
+      border: 1px solid $txt; text-align: center; color: $txt;
     }
   }
 }
