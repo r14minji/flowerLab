@@ -255,3 +255,40 @@ $txt : #262223;
     }
   }
 }
+/*-----  instagram ------------------------------------------------------  */
+#instagram{
+  width: 100%;
+  padding: 120px;
+  background: $base;
+
+  h1{
+    font: normal 36px/1.2 'lora';
+    margin-bottom: 20px;
+  }
+
+  .inner{
+    width: 1180px;
+    margin: 0 auto; 
+    position: relative;
+
+    .wrap{
+      width: 100%;
+      margin: 0 auto;
+
+      &::after{ content: ""; display: block; clear: both;}
+      article{
+        width: 230px; height: 230px; float:left;
+
+        .instaPic{
+          width: 100%; height: 100%;
+          background: $core;
+
+          img{
+            width: 100%;height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -232,4 +232,35 @@ a {
       text-align: center;
       color: #262223; }
 
+/*-----  instagram ------------------------------------------------------  */
+#instagram {
+  width: 100%;
+  padding: 120px;
+  background: #F2EDD7; }
+  #instagram h1 {
+    font: normal 36px/1.2 'lora';
+    margin-bottom: 20px; }
+  #instagram .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #instagram .inner .wrap {
+      width: 100%;
+      margin: 0 auto; }
+      #instagram .inner .wrap::after {
+        content: "";
+        display: block;
+        clear: both; }
+      #instagram .inner .wrap article {
+        width: 230px;
+        height: 230px;
+        float: left; }
+        #instagram .inner .wrap article .instaPic {
+          width: 100%;
+          height: 100%;
+          background: #CCD1B6; }
+          #instagram .inner .wrap article .instaPic img {
+            width: 100%;
+            height: 100%; }
+
 /*# sourceMappingURL=style.css.map */
