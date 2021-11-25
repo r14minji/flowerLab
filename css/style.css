@@ -165,7 +165,7 @@ a {
       text-align: center;
       color: #262223; }
 
-/*----- brand ------------------------------------------------------------*/
+/*----- brand -- individual slection -------------------------------------*/
 #brand {
   width: 100%;
   background: #F2EDD7;
@@ -236,10 +236,11 @@ a {
 #instagram {
   width: 100%;
   padding: 120px;
-  background: #F2EDD7; }
+  background: #fff; }
   #instagram h1 {
     font: normal 36px/1.2 'lora';
-    margin-bottom: 20px; }
+    margin-bottom: 30px;
+    text-align: center; }
   #instagram .inner {
     width: 1180px;
     margin: 0 auto;
@@ -262,5 +263,56 @@ a {
           #instagram .inner .wrap article .instaPic img {
             width: 100%;
             height: 100%; }
+
+/*----- footer ------------------------------------------------------------ */
+#footer {
+  width: 100%;
+  padding: 80px 0;
+  background: #CCD1B6; }
+  #footer .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #footer .inner::after {
+      content: "";
+      display: block;
+      clear: both; }
+    #footer .inner h1 {
+      float: left;
+      font: 30px /1 'lora';
+      color: #262223; }
+    #footer .inner .policy {
+      float: right; }
+      #footer .inner .policy li {
+        float: left;
+        margin-left: 20px; }
+        #footer .inner .policy li a {
+          font: normal 14px/1 'lora';
+          color: #262223;
+          opacity: 0.7; }
+    #footer .inner address {
+      float: left;
+      width: 100%;
+      font: 14px/1.3 'lora';
+      color: #262223;
+      opacity: 0.7;
+      margin: 20px 0;
+      border-top: 1px solid #262223;
+      padding-top: 20px; }
+    #footer .inner p {
+      float: left;
+      width: 100%;
+      font: 12px/1 'lora';
+      color: #262223;
+      opacity: 0.7; }
+    #footer .inner .sns {
+      float: left;
+      margin-top: 20px; }
+      #footer .inner .sns li {
+        float: left;
+        margin-right: 10px; }
+        #footer .inner .sns li a {
+          color: #262223;
+          opacity: 0.7; }
 
 /*# sourceMappingURL=style.css.map */

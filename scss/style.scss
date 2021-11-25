@@ -181,7 +181,7 @@ $txt : #262223;
     }
   }
 }
-/*----- brand ------------------------------------------------------------*/
+/*----- brand -- individual slection -------------------------------------*/
 #brand{
   width: 100%;
   background: $base;
@@ -259,11 +259,12 @@ $txt : #262223;
 #instagram{
   width: 100%;
   padding: 120px;
-  background: $base;
+  background: #fff;
 
   h1{
     font: normal 36px/1.2 'lora';
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: center;
   }
 
   .inner{
@@ -290,5 +291,63 @@ $txt : #262223;
       }
     }
   }
+}
 
+/*----- footer ------------------------------------------------------------ */
+#footer{
+  width: 100%;
+  padding: 80px 0;
+  background: $core;
+
+  .inner{
+    width: 1180px;
+    margin: 0 auto;
+    position: relative;
+
+    &::after {content: ""; display: block; clear: both;}
+    h1{
+      float: left;
+      font: 30px /1 'lora';
+      color: $txt; 
+    }
+    .policy{
+      float: right;
+
+      li{
+        float: left; margin-left: 20px;
+
+        a{
+          font: normal 14px/1 'lora';
+          color: $txt; opacity: 0.7;
+        }
+      }
+    }
+    address{
+      float: left;
+      width: 100%;
+      font: 14px/1.3 'lora';
+      color: $txt; opacity: 0.7;
+      margin: 20px 0;
+      border-top: 1px solid $txt;
+      padding-top: 20px;
+    }
+    p{
+      float:left;
+      width:100%; 
+      font:12px/1 'lora'; 
+      color: $txt; opacity: 0.7;
+    }
+
+    .sns{
+      float: left;
+      margin-top: 20px;
+        li{
+          float: left; margin-right: 10px;
+          
+          a{
+            color: $txt; opacity: 0.7;
+          }
+        }
+    }
+  }
 }
