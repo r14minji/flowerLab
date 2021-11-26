@@ -43,13 +43,36 @@ a {
           font: 14px/1 'lora';
           color: #262223; }
           #header .inner .menuWeb #gnb > li > a:hover {
-            background: #FFB799;
-            color: #F2EDD7; }
+            border-bottom: 3px solid #FFB799;
+            color: #CCD1B6; }
+        #header .inner .menuWeb #gnb > li .sub {
+          width: 100%;
+          height: 200px;
+          background: #CCD1B6;
+          position: absolute;
+          right: 0;
+          top: 40px;
+          z-index: 3;
+          padding: 30px; }
+          #header .inner .menuWeb #gnb > li .sub ul {
+            display: flex; }
+            #header .inner .menuWeb #gnb > li .sub ul li {
+              display: flex; }
+              #header .inner .menuWeb #gnb > li .sub ul li a {
+                position: relative;
+                color: #fff;
+                z-index: 3;
+                display: inline-block;
+                font: bold 12px/1.2 "arial";
+                width: 300px;
+                height: 10px;
+                padding: 10px; }
     #header .inner .menuWeb #util {
       position: absolute;
       top: 50%;
       right: 0px;
-      transform: translateY(-50%); }
+      transform: translateY(-50%);
+      z-index: 4; }
       #header .inner .menuWeb #util > li {
         float: left; }
         #header .inner .menuWeb #util > li > a {
@@ -101,7 +124,8 @@ a {
   #bestSellers .inner {
     width: 1180px;
     margin: 0 auto;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     #bestSellers .inner .txt {
       width: 230px;
       padding: 50px 0; }
