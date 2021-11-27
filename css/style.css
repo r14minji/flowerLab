@@ -161,9 +161,9 @@ a {
     #header .inner .menuMo {
       position: fixed;
       top: 0;
-      right: -340px;
+      right: -270px;
       z-index: 10;
-      width: 340px;
+      width: 270px;
       height: 100vh;
       background: #CCD1B6;
       padding: 20px 30px;
@@ -177,7 +177,7 @@ a {
           color: #262223;
           text-align: center; }
       #header .inner .menuMo.on {
-        left: 0px; }
+        right: 0px; }
       #header .inner .menuMo #gnbMo > li {
         position: relative; }
         #header .inner .menuMo #gnbMo > li > a {
@@ -465,10 +465,10 @@ a {
     height: 80px; }
     #header .inner > h1 {
       left: 20px; }
-  #header .menuWeb {
-    display: none; }
-  #header .btnCall {
-    display: block; }
+    #header .inner .menuWeb {
+      display: none; }
+    #header .inner .btnCall {
+      display: block; }
 
   /* visual */
   #visual .inner {
@@ -576,15 +576,6 @@ a {
         #bestSellers .inner .con .wrap article:last-child {
           margin-right: auto; }
 
-  /* learnMore 
-  #banner{
-    padding: 100px 30px;
-
-    .inner{
-      width: 100%;
-    }
-  }
-  */
   /* brand -- individual slection */
   #brand .inner .brandTxt {
     width: 80%;
@@ -614,16 +605,57 @@ a {
         #instagram .inner .wrap article {
           width: calc(100% / 2);
           height: 20%;
-          float: left; }
+          float: left; } }
+/*mobile-----------------------------------------------------------------*/
+@media screen and (max-width: 539px) {
+  /*bestSellers*/
+  #bestSellers {
+    padding: 60px 20px; }
+    #bestSellers .inner .txt a {
+      width: 100%; }
 
-  /*footer 
-  #footer{
-    padding:60px 30px;
+  /* learnMore   */
+  #banner {
+    padding: 80px 20px; }
+    #banner .inner h1 {
+      font: normal 18px/1 'lora'; }
+    #banner .inner a {
+      width: 100%; }
 
-    .inner{
+  /* brand -- start Now */
+  #brand {
+    padding: 80px 20px; }
+    #brand .inner .brandTxt {
+      width: 90%;
+      height: auto; }
+      #brand .inner .brandTxt h1 {
+        font: normal 24px/1 'lora'; }
+
+  /* story */
+  #story {
+    padding: 60px 20px; }
+
+  /*  instagram */
+  #instagram {
+    padding: 60px 20px; }
+    #instagram .inner {
+      padding: 0 20px; }
+      #instagram .inner .wrap article {
+        width: 100%; }
+
+  /*footer   */
+  #footer {
+    padding: 40px 20px; }
+    #footer .inner h1 {
+      font: 24px /1 'lora';
+      margin-bottom: 10px; }
+    #footer .inner .policy {
       width: 100%;
-    }
-  }
-  */ }
+      float: left; }
+      #footer .inner .policy li {
+        margin-left: 0px;
+        margin: 5px; }
+        #footer .inner .policy li a {
+          font: normal 12px/1 'lora'; } }
 
 /*# sourceMappingURL=style.css.map */

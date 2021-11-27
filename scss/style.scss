@@ -170,9 +170,9 @@ $txt : #262223;
       position: absolute; top:0; left: 0;
     }
     .menuMo{
-      position: fixed; top: 0; right: -340px; //right: 0;
+      position: fixed; top: 0; right: -270px; //right: 0;
       z-index: 10;
-      width: 340px; height: 100vh; background: $core;
+      width: 270px; height: 100vh; background: $core;
       padding: 20px 30px;
       transition: 0.5s;
 
@@ -186,7 +186,7 @@ $txt : #262223;
         }
       }
 
-      &.on{left: 0px;}
+      &.on{right: 0px;}
 
       #gnbMo{
         >li{
@@ -522,14 +522,14 @@ $txt : #262223;
       width: 100%; height: 80px;
 
       >h1{ left: 20px;}
-      }
       .menuWeb{
         display: none;
       }
       .btnCall{
-        display: block; //
+        display: block;
       }
     }
+  }
 
   /* visual */
   #visual{
@@ -669,16 +669,6 @@ $txt : #262223;
       }
     }
   }
-  /* learnMore 
-  #banner{
-    padding: 100px 30px;
-
-    .inner{
-      width: 100%;
-    }
-  }
-  */
-
   /* brand -- individual slection */
   #brand{
     .inner{
@@ -722,16 +712,77 @@ $txt : #262223;
       }
     }
   }
-
-  /*footer 
-  #footer{
-    padding:60px 30px;
-
+}
+/*mobile-----------------------------------------------------------------*/
+@media screen and (max-width: $mobile){
+  /*bestSellers*/
+  #bestSellers{
+    padding: 60px 20px;
     .inner{
-      width: 100%;
+
+      .txt{
+        a{ width: 100%;}
+      }
     }
   }
-  */
+  /* learnMore   */
+  #banner{
+    padding: 80px 20px;
+    .inner{
+      h1{
+        font: normal 18px/1 'lora';
+      }
+      a{ width: 100%;}
+    }
+  }
+  /* brand -- start Now */
+  #brand{
+    padding: 80px 20px;
+    
+    .inner{
+      .brandTxt{
+        width: 90%; height: auto;
+        h1{
+        font: normal 24px/1 'lora';
+        }
+      }
+    }
+  }
+  /* story */
+  #story{
+    padding: 60px 20px;
+  }
+  /*  instagram */
+  #instagram{
+    padding: 60px 20px;
+
+    .inner{
+      padding: 0 20px;
+      .wrap{
+        article{ width:100%;}
+      }
+    }
+  }
+  /*footer   */
+  #footer{
+    padding:40px 20px;
+
+    .inner{
+      h1{
+        font: 24px /1 'lora';
+        margin-bottom: 10px;
+      }
+      .policy{
+        width: 100%;
+        float: left;
+        li{
+          margin-left: 0px;
+          margin: 5px;
+          a{font: normal 12px/1 'lora';}
+        } 
+      }
+    }
+  }
 }
 
 
