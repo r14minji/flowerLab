@@ -168,15 +168,18 @@ $txt : #262223;
 
     .bgMo{
       display: none;
-      width: 100vw; height: 100vh; background: rgba(0,0,0,0.8);
-      position: absolute; top:0; left: 0;
+      &.on{
+        display: block;
+        width: 100vw; height: 100vh; background: rgba(0,0,0,0.8);
+        position: absolute; top:0; left: 0;
+      }
     }
     .menuMo{
       position: fixed; top: 0; right: -270px; //right: 0;
       z-index: 10;
       width: 270px; height: 100vh; background: $core;
       padding: 20px 30px;
-      transition: 0.5s;
+      transition: 0.5s; 
 
       h1{
         padding-bottom: 30px;
