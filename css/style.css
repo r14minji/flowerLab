@@ -13,28 +13,29 @@ a {
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 3; }
+  #header.on {
+    background: #fff; }
   #header .inner {
     width: 1180px;
-    height: 80px;
+    height: 60px;
     margin: 0 auto;
     position: relative; }
     #header .inner > h1 {
       position: absolute;
-      top: 50%;
+      bottom: 0;
       left: 0;
-      transform: translateY(-50%); }
+      padding: 10px 0; }
       #header .inner > h1 > a {
         font: bold 20px/1 'lora';
         color: #262223; }
     #header .inner .menuWeb #gnb {
       position: absolute;
-      top: 50%;
-      right: 200px;
-      transform: translateY(-50%); }
+      bottom: 0;
+      right: 200px; }
       #header .inner .menuWeb #gnb > li {
         float: left; }
         #header .inner .menuWeb #gnb > li > a {
@@ -46,41 +47,56 @@ a {
             border-bottom: 3px solid #FFB799;
             color: #CCD1B6; }
         #header .inner .menuWeb #gnb > li .sub {
-          width: 100%;
-          height: 200px;
-          background: #CCD1B6;
+          display: none;
+          width: 1180px;
+          height: 180px;
+          background: #fff;
           position: absolute;
-          right: 0;
           top: 40px;
-          z-index: 3;
-          padding: 30px; }
+          right: -200px; }
           #header .inner .menuWeb #gnb > li .sub ul {
-            display: flex; }
+            position: relative;
+            z-index: 3; }
+            #header .inner .menuWeb #gnb > li .sub ul:nth-of-type(1) {
+              position: absolute;
+              top: 0;
+              left: 450px; }
+            #header .inner .menuWeb #gnb > li .sub ul:nth-of-type(2) {
+              position: absolute;
+              top: 0;
+              left: 550px; }
             #header .inner .menuWeb #gnb > li .sub ul li {
-              display: flex; }
+              width: 100px;
+              height: 40px;
+              background: #fff;
+              text-align: center; }
               #header .inner .menuWeb #gnb > li .sub ul li a {
-                position: relative;
-                color: #fff;
-                z-index: 3;
-                display: inline-block;
-                font: bold 12px/1.2 "arial";
-                width: 300px;
-                height: 10px;
-                padding: 10px; }
-    #header .inner .menuWeb #util {
+                color: #262223;
+                font: normal 14px/40px 'lora';
+                text-align: center; }
+          #header .inner .menuWeb #gnb > li .sub::before {
+            content: "";
+            display: block;
+            width: 100vw;
+            height: 180px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3; }
+    #header .inner .menuWeb .util {
       position: absolute;
-      top: 50%;
-      right: 0px;
-      transform: translateY(-50%);
-      z-index: 4; }
-      #header .inner .menuWeb #util > li {
+      bottom: 0;
+      right: 0px; }
+      #header .inner .menuWeb .util > li {
         float: left; }
-        #header .inner .menuWeb #util > li > a {
+        #header .inner .menuWeb .util > li > a {
           display: inline-block;
           padding: 10px;
           font: 14px/1 'lora';
           color: #262223; }
-          #header .inner .menuWeb #util > li > a:hover {
+          #header .inner .menuWeb .util > li > a:hover {
             background: #FFB799;
             color: #F2EDD7; }
     #header .inner .btnCall, #header .inner .menuMo {
@@ -235,13 +251,14 @@ a {
 /*----- story -------------------------------------------------------------*/
 #story {
   width: 100%;
-  padding: 120px;
+  padding: 120px 0px;
   background: url(../img/banner4.jpg) no-repeat center/cover; }
   #story .inner {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
     #story .inner p {
+      width: 100%;
       font: normal 36px/1.2 'lora';
       letter-spacing: 2px;
       margin-bottom: 30px;
@@ -259,16 +276,16 @@ a {
 /*-----  instagram ------------------------------------------------------  */
 #instagram {
   width: 100%;
-  padding: 120px;
+  padding: 120px 0px;
   background: #fff; }
-  #instagram h1 {
-    font: normal 36px/1.2 'lora';
-    margin-bottom: 30px;
-    text-align: center; }
   #instagram .inner {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
+    #instagram .inner h1 {
+      font: normal 36px/1.2 'lora';
+      margin-bottom: 30px;
+      text-align: center; }
     #instagram .inner .wrap {
       width: 100%;
       margin: 0 auto; }
