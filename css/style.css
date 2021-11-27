@@ -458,4 +458,99 @@ a {
           color: #262223;
           opacity: 0.7; }
 
+/*tablet-----------------------------------------------------------------*/
+@media screen and (max-width: 1179px) {
+  /* header */
+  #header .inner {
+    width: 100%;
+    height: 80px; }
+    #header .inner > h1 {
+      left: 20px; }
+  #header .menuWeb {
+    display: none; }
+  #header .btnCall {
+    display: block; }
+
+  /* visual */
+  #visual .inner {
+    width: 100%;
+    padding: 0 30px; }
+    #visual .inner h1 {
+      font: normal 9vmin/1.2 'lora'; }
+
+  /*bestSellers*/
+  #bestSellers {
+    padding: 120px 30px; }
+    #bestSellers .inner {
+      width: 100%;
+      position: relative; }
+      #bestSellers .inner .txt {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center; }
+        #bestSellers .inner .txt a {
+          display: block;
+          margin: 0 auto;
+          width: 120px;
+          height: 40px;
+          font: 16px/40px 'lora';
+          border: 1px solid #262223;
+          text-align: center;
+          color: #262223; }
+      #bestSellers .inner .con {
+        width: 100%;
+        position: relative;
+        right: 0; }
+
+  /* learnMore */
+  #banner {
+    padding: 100px 30px; }
+    #banner .inner {
+      width: 100%; }
+
+  /* brand -- individual slection */
+  #brand {
+    padding: 120px 30px; }
+    #brand .inner {
+      width: 100%; }
+      #brand .inner .brandTxt {
+        width: 65%;
+        height: 65vh;
+        background: #CCD1B6;
+        padding: 80px 200px 0 50px; }
+      #brand .inner .brandPic {
+        width: 50%;
+        height: 55vh; }
+
+  /* story */
+  #story {
+    padding: 80px 0px; }
+    #story .inner {
+      width: 100%; }
+      #story .inner p {
+        width: 100%;
+        font: normal 3vmax/1.2 'lora'; }
+
+  /*  instagram */
+  #instagram {
+    padding: 80px 30px; }
+    #instagram .inner {
+      width: 100%; }
+      #instagram .inner h1 {
+        font: normal 3vmax/1.2 'lora'; }
+      #instagram .inner .wrap {
+        width: 100%;
+        margin: 0 auto; }
+        #instagram .inner .wrap article {
+          width: 20%;
+          height: 20%;
+          float: left; }
+
+  /*footer */
+  #footer {
+    padding: 60px 30px; }
+    #footer .inner {
+      width: 100%; } }
+
 /*# sourceMappingURL=style.css.map */
