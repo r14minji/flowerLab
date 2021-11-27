@@ -117,9 +117,10 @@ $txt : #262223;
 
 
     .btnCall{
-      display: none;
+      //display: none;
       width: 20px; height: 20px;
       position: absolute; top: 50%; right: 30px; transform: translateY(-50%);
+      z-index: 11;
 
       &::before{
         content: ""; display: block; 
@@ -157,8 +158,33 @@ $txt : #262223;
     }
 
 
+    .bgMo{
+      //display: none;
+      width: 100vw; height: 100vh; background: rgba(0,0,0,0.8);
+      position: absolute; top:0; left: 0;
+    }
     .menuMo{
-      display: none;
+      position: fixed; top: 0; right: 0; //right: -340px;
+      z-index: 10;
+      width: 340px; height: 100vh; background: $core;
+      padding: 20px 30px;
+      transition: 0.5s;
+
+      h1{
+        padding-bottom: 30px;
+        border-bottom: 1px solid #fff;
+        a{
+          display: block;
+          font: normal 20px/1.2 'lora'; color: $txt;
+          text-align: center;
+        }
+      }
+      #gnbMo li a{
+        display: block; width: 100%; 
+        padding: 20px 0;
+        color: $txt;
+        
+      }
     }
 
 
