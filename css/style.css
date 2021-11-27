@@ -99,7 +99,57 @@ a {
           #header .inner .menuWeb .util > li > a:hover {
             background: #FFB799;
             color: #F2EDD7; }
-    #header .inner .btnCall, #header .inner .menuMo {
+    #header .inner .btnCall {
+      display: none;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      right: 30px;
+      transform: translateY(-50%); }
+      #header .inner .btnCall::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #262223;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: top 0.5s 0s , transform 0.5s 0.5s; }
+      #header .inner .btnCall::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #262223;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: top 0.5s 0s , transform 0.5s 0.5s; }
+      #header .inner .btnCall span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #262223;
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 0;
+        transform: translateY(-50%);
+        text-indent: -9999px; }
+      #header .inner .btnCall.on::before {
+        top: 50%;
+        margin-top: -1px;
+        transform: rotate(45deg); }
+      #header .inner .btnCall.on::after {
+        bottom: 50%;
+        margin-bottom: -1px;
+        transform: rotate(-45deg); }
+      #header .inner .btnCall.on span {
+        transform: translateX(100%);
+        opacity: 0; }
+    #header .inner .menuMo {
       display: none; }
 
 /* ----- visual ---------------------------------------------------------*/
