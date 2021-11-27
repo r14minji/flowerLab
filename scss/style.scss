@@ -117,7 +117,7 @@ $txt : #262223;
 
 
     .btnCall{
-      //display: none;
+      display: none;
       width: 20px; height: 20px;
       position: absolute; top: 50%; right: 30px; transform: translateY(-50%);
       z-index: 11;
@@ -164,7 +164,7 @@ $txt : #262223;
       position: absolute; top:0; left: 0;
     }
     .menuMo{
-      position: fixed; top: 0; right: 0; //right: -340px;
+      position: fixed; top: 0; right: -340px; //right: 0;
       z-index: 10;
       width: 340px; height: 100vh; background: $core;
       padding: 20px 30px;
@@ -179,6 +179,9 @@ $txt : #262223;
           text-align: center;
         }
       }
+
+      &.on{left: 0px;}
+      
       #gnbMo{
         >li{
           position: relative;
@@ -196,7 +199,7 @@ $txt : #262223;
           }
 
           div{
-            //display: none;
+            display: none;
             transition: 1s;
 
             ul li{

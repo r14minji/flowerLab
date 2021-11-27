@@ -100,6 +100,7 @@ a {
             background: #FFB799;
             color: #F2EDD7; }
     #header .inner .btnCall {
+      display: none;
       width: 20px;
       height: 20px;
       position: absolute;
@@ -160,7 +161,7 @@ a {
     #header .inner .menuMo {
       position: fixed;
       top: 0;
-      right: 0;
+      right: -340px;
       z-index: 10;
       width: 340px;
       height: 100vh;
@@ -175,6 +176,8 @@ a {
           font: normal 20px/1.2 'lora';
           color: #262223;
           text-align: center; }
+      #header .inner .menuMo.on {
+        left: 0px; }
       #header .inner .menuMo #gnbMo > li {
         position: relative; }
         #header .inner .menuMo #gnbMo > li > a {
@@ -190,6 +193,7 @@ a {
             #header .inner .menuMo #gnbMo > li > a strong i {
               transition: 1s; }
         #header .inner .menuMo #gnbMo > li div {
+          display: none;
           transition: 1s; }
           #header .inner .menuMo #gnbMo > li div ul li {
             padding: 0 40px;
