@@ -150,6 +150,7 @@ a {
         transform: translateX(100%);
         opacity: 0; }
     #header .inner .bgMo {
+      display: none;
       width: 100vw;
       height: 100vh;
       background: rgba(0, 0, 0, 0.8);
@@ -174,11 +175,30 @@ a {
           font: normal 20px/1.2 'lora';
           color: #262223;
           text-align: center; }
-      #header .inner .menuMo #gnbMo li a {
-        display: block;
-        width: 100%;
-        padding: 20px 0;
-        color: #262223; }
+      #header .inner .menuMo #gnbMo > li {
+        position: relative; }
+        #header .inner .menuMo #gnbMo > li > a {
+          display: inline-block;
+          padding: 10px 0px 10px 20px;
+          font: normal 16px/1 'lora';
+          color: #262223; }
+          #header .inner .menuMo #gnbMo > li > a strong {
+            font: normal 16px/1 'lora';
+            position: absolute;
+            top: 10px;
+            right: 10px; }
+            #header .inner .menuMo #gnbMo > li > a strong i {
+              transition: 1s; }
+        #header .inner .menuMo #gnbMo > li div {
+          transition: 1s; }
+          #header .inner .menuMo #gnbMo > li div ul li {
+            padding: 0 40px;
+            margin-bottom: 10px; }
+            #header .inner .menuMo #gnbMo > li div ul li a {
+              font: 14px/1 'lora';
+              color: #262223; }
+        #header .inner .menuMo #gnbMo > li.on strong i {
+          transform: rotate(-180deg); }
 
 /* ----- visual ---------------------------------------------------------*/
 #visual {

@@ -159,7 +159,7 @@ $txt : #262223;
 
 
     .bgMo{
-      //display: none;
+      display: none;
       width: 100vw; height: 100vh; background: rgba(0,0,0,0.8);
       position: absolute; top:0; left: 0;
     }
@@ -179,15 +179,42 @@ $txt : #262223;
           text-align: center;
         }
       }
-      #gnbMo li a{
-        display: block; width: 100%; 
-        padding: 20px 0;
-        color: $txt;
-        
+      #gnbMo{
+        >li{
+          position: relative;
+          >a{
+            display: inline-block; padding: 10px 0px 10px 20px;
+            font: normal 16px/1 'lora';
+            color: $txt;
+            
+            strong{
+              font: normal 16px/1 'lora';
+              position: absolute; top: 10px; right: 10px;
+
+              i{ transition: 1s;}
+            } 
+          }
+
+          div{
+            //display: none;
+            transition: 1s;
+
+            ul li{
+              padding: 0 40px;
+              margin-bottom: 10px;
+              a{
+                font: 14px/1 'lora';
+                color:$txt;
+              }
+            }
+          }
+          
+          &.on strong i{
+            transform: rotate(-180deg);
+          } 
+        }
       }
     }
-
-
   }
 }
 
