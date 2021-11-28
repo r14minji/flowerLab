@@ -838,13 +838,43 @@ $txt : #262223;
         height: auto;
         padding-bottom: 100px;
 
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 220px;
+            .inner {
+              padding: 10px;
+              .con {
+                h2{font: normal 16px/1 "lora";}
+                p{margin-right: 80px;}
+                img {width: 200px; height: 200px;}
+              }
+            }
+          }
+      
+          /* 활성화 슬라이드 --------------------------------------------*/
+          .swiper-slide-active {
+            .inner {
+              opacity: 1;
+              box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.8);
+      
+              .con h2::after {
+                width: 100px;
+              }
+            }
+          }
+          /*활성화 슬라이드 이전, 다음 슬라이드 --------------------------*/
+          .swiper-slide-prev .inner,
+          .swiper-slide-next .inner {
+            opacity: 0.7;
+          }
+        }
+
       /*좌우버튼 --------------------------------------------------*/
       .swiper-button-prev {bottom:10%;}
       .swiper-button-next {bottom: 10%;}
       }
     }
   }
-
 
   /* learnMore   */
   #banner{
