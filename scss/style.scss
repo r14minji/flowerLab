@@ -7,7 +7,7 @@ $mobile: 539px;
 // 중간 760  에서  미디어쿼리 만들기, 베스트셀이랑, 스토리
 
 $base: #F2EDD7;
-$core: #CCD1B6;
+$core: #999e85;
 $hover: #FFB799;
 $txt : #262223;
 
@@ -258,10 +258,22 @@ $txt : #262223;
       a{
         display: block; width: 150px; height: 40px;
         font: 18px/40px 'lora';
-        border: 1px solid $txt; text-align: center; color: $txt;
+        //border: 1px solid $txt; 
+        text-align: center; color: white; 
+        transition: 0.5s;
+        background-image: linear-gradient(to right, #093028 0%, #237A57  51%, #093028  100%);
+        text-transform: uppercase; 
+        background-size: 200% auto;            
+        box-shadow: 0 0 20px #eee;
+
+        &:hover {
+          background-position: right center; /* change the direction of the change here */
+          text-decoration: none;
+        }
       }
   }
 }
+
 /*----- bestSellers --------------------------------------------------- */
 #bestSellers{
   width: 100%;
@@ -648,7 +660,7 @@ $txt : #262223;
 @media screen and (max-width: $middle){
   /* visual */
   #visual{
-    background: $core; //url()
+    background: url(../img/banner1.jpg) no-repeat center/cover;
 
     img{display: none;}
     .inner{
