@@ -412,8 +412,6 @@ $txt : #262223;
       &::after{display: none;}
     }
     }
-
-
   }
 }
 /*----- learnMore --------------------------------------------------------*/
@@ -649,28 +647,37 @@ $txt : #262223;
   }
   /*bestSellers*/
   #bestSellers{
-    padding: 120px 30px;
+    padding: 100px 30px;
 
-    .inner{
-      width:100%;
-      position: relative;
+    .innerBS{
+      width: 100%;
+      height: auto;
+
 
       .txt{
-        width: 100%;
-        padding: 0; margin-bottom: 30px;
-        text-align: center; 
+        float:left;
+        width: 100%;  height: auto;
+        padding: 0px 0px ;
+        margin-bottom: 20px;
 
+        h1{
+          font: normal 36px/1 'lora';
+          text-align: center;
+        }
+        p{display: none;}
         a{
-          display: block;
-          margin: 0 auto;
-          width: 120px; height: 40px;
-          font: 16px/40px 'lora';
-          border: 1px solid $txt; text-align: center; color: $txt;
+          position: absolute; bottom: 0px; left: 50%; transform: translateX(-50%);
         }
       }
-      .con{
+  
+      .wrapBS {
         width: 100%;
-        position: relative; right: 0;
+        height: auto;
+        padding-bottom: 100px;
+
+      /*좌우버튼 --------------------------------------------------*/
+      .swiper-button-prev {bottom:10%;}
+      .swiper-button-next {bottom: 10%;}
       }
     }
   }
@@ -756,25 +763,6 @@ $txt : #262223;
       a{width: 100%;}
     }
   }
-  /*bestSellers*/
-  #bestSellers{
-    .inner{
-
-      .con{
-        width: 100%;
-        .wrap {
-          display: block;
-
-          article{
-            margin: 0 auto;
-            width: 380px; height: 300px;
-            margin-bottom: 10px;
-            &:last-child{ margin-right:auto;}
-          }
-        }
-      }
-    }
-  }
   /* brand -- individual slection */
   #brand{
     .inner{
@@ -824,13 +812,40 @@ $txt : #262223;
   /*bestSellers*/
   #bestSellers{
     padding: 60px 20px;
-    .inner{
+
+    .innerBS{
+      width: 100%;
+      height: auto;
 
       .txt{
-        a{ width: 100%;}
+        float:left;
+        width: 100%;  height: auto;
+        padding: 0px 0px ;
+        margin-bottom: 20px;
+
+        h1{
+          font: normal 36px/1 'lora';
+          text-align: center;
+        }
+        p{display: none;}
+        a{
+          position: absolute; bottom: 0px; left: 50%; transform: translateX(-50%);
+        }
+      }
+  
+      .wrapBS {
+        width: 100%;
+        height: auto;
+        padding-bottom: 100px;
+
+      /*좌우버튼 --------------------------------------------------*/
+      .swiper-button-prev {bottom:10%;}
+      .swiper-button-next {bottom: 10%;}
       }
     }
   }
+
+
   /* learnMore   */
   #banner{
     padding: 80px 20px;

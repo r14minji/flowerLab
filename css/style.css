@@ -901,28 +901,35 @@ a {
 
   /*bestSellers*/
   #bestSellers {
-    padding: 120px 30px; }
-    #bestSellers .inner {
+    padding: 100px 30px; }
+    #bestSellers .innerBS {
       width: 100%;
-      position: relative; }
-      #bestSellers .inner .txt {
+      height: auto; }
+      #bestSellers .innerBS .txt {
+        float: left;
         width: 100%;
-        padding: 0;
-        margin-bottom: 30px;
-        text-align: center; }
-        #bestSellers .inner .txt a {
-          display: block;
-          margin: 0 auto;
-          width: 120px;
-          height: 40px;
-          font: 16px/40px 'lora';
-          border: 1px solid #262223;
-          text-align: center;
-          color: #262223; }
-      #bestSellers .inner .con {
+        height: auto;
+        padding: 0px 0px;
+        margin-bottom: 20px; }
+        #bestSellers .innerBS .txt h1 {
+          font: normal 36px/1 'lora';
+          text-align: center; }
+        #bestSellers .innerBS .txt p {
+          display: none; }
+        #bestSellers .innerBS .txt a {
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          transform: translateX(-50%); }
+      #bestSellers .innerBS .wrapBS {
         width: 100%;
-        position: relative;
-        right: 0; }
+        height: auto;
+        padding-bottom: 100px;
+        /*좌우버튼 --------------------------------------------------*/ }
+        #bestSellers .innerBS .wrapBS .swiper-button-prev {
+          bottom: 10%; }
+        #bestSellers .innerBS .wrapBS .swiper-button-next {
+          bottom: 10%; }
 
   /* learnMore */
   #banner {
@@ -985,19 +992,6 @@ a {
     #visual .inner a {
       width: 100%; }
 
-  /*bestSellers*/
-  #bestSellers .inner .con {
-    width: 100%; }
-    #bestSellers .inner .con .wrap {
-      display: block; }
-      #bestSellers .inner .con .wrap article {
-        margin: 0 auto;
-        width: 380px;
-        height: 300px;
-        margin-bottom: 10px; }
-        #bestSellers .inner .con .wrap article:last-child {
-          margin-right: auto; }
-
   /* brand -- individual slection */
   #brand .inner .brandTxt {
     width: 80%;
@@ -1033,8 +1027,34 @@ a {
   /*bestSellers*/
   #bestSellers {
     padding: 60px 20px; }
-    #bestSellers .inner .txt a {
-      width: 100%; }
+    #bestSellers .innerBS {
+      width: 100%;
+      height: auto; }
+      #bestSellers .innerBS .txt {
+        float: left;
+        width: 100%;
+        height: auto;
+        padding: 0px 0px;
+        margin-bottom: 20px; }
+        #bestSellers .innerBS .txt h1 {
+          font: normal 36px/1 'lora';
+          text-align: center; }
+        #bestSellers .innerBS .txt p {
+          display: none; }
+        #bestSellers .innerBS .txt a {
+          position: absolute;
+          bottom: 0px;
+          left: 50%;
+          transform: translateX(-50%); }
+      #bestSellers .innerBS .wrapBS {
+        width: 100%;
+        height: auto;
+        padding-bottom: 100px;
+        /*좌우버튼 --------------------------------------------------*/ }
+        #bestSellers .innerBS .wrapBS .swiper-button-prev {
+          bottom: 10%; }
+        #bestSellers .innerBS .wrapBS .swiper-button-next {
+          bottom: 10%; }
 
   /* learnMore   */
   #banner {
