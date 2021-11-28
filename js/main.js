@@ -18,7 +18,11 @@ gnbMo.forEach( li => {
 })
 
 
-// figure 버튼
+// header - 2depth
+
+
+
+// figure - Swiper 동작 
 const swiper = new Swiper('.wrapBS', {
   effect: "coverflow",
   coverflowEffect: {
