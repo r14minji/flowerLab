@@ -6,9 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>flowerLab</title>
+  <script src="https://kit.fontawesome.com/91c15511c8.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <script defer src="js/main.js"></script>
-  <script src="https://kit.fontawesome.com/91c15511c8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -115,32 +117,69 @@
   </figure>
   <!-- bestSellers -->
   <section id="bestSellers">
-    <div class="inner">
+    <div class="innerBS">
       <div class="txt">
         <h1>Bestsllers</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore impedit consectetur officia quam laboriosam alias ad in eius non iure.</p>
         <a href="#">Shop all</a>
       </div>
-      <div class="con">
-        <div class="wrap">
-          <article>
-            <div class="pic">
-              <img src="" alt="">
+      <div class="wrapBS">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="inner">
+              <div class="con">
+                <img src="img/e1.jpg">
+                <h2>Lorem ipsum dolor.</h2>
+                <p>Loremips</p>
+                <span>\35,000</span>
+              </div>
             </div>
-          </article>
-          <article>
-            <div class="pic">
-              <img src="" alt="">
+          </div>
+          <div class="swiper-slide">
+            <div class="inner">
+              <div class="con">
+                <img src="img/e2.jpg">
+                <h2>Lorem ipsum dolor.</h2>
+                <p>Loremips</p>
+                <span>\35,000</span>
+              </div>
             </div>
-          </article>
-          <article>
-            <div class="pic">
-              <img src="" alt="">
+          </div>
+          <div class="swiper-slide">
+            <div class="inner">
+              <div class="con">
+                <img src="img/e3.png">
+                <h2>Lorem ipsum dolor.</h2>
+                <p>Loremips</p>
+                <span>\35,000</span>
+              </div>
             </div>
-          </article>
+          </div>
+          <div class="swiper-slide">
+            <div class="inner">
+              <div class="con">
+                <img src="img/e4.png">
+                <h2>Lorem ipsum dolor.</h2>
+                <p>Loremips</p>
+                <span>\35,000</span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="inner">
+              <div class="con">
+                <img src="img/e5.jpg">
+                <h2>Lorem ipsum dolor.</h2>
+                <p>Loremips</p>
+                <span>\35,000</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
+        <div class="swiper-button-next"><i class="fas fa-arrow-right"></i></div>
+      <div class="swiper-button-prev"><i class="fas fa-arrow-left"></i></div>
+      </div>
     </div>
   </section>
 <!-- banner  -->
@@ -148,7 +187,7 @@
     <div class="inner">
       <h1>Meet the spring with us</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas, doloribus?</p>
-      <a href="#">Learn more</a>
+      <a href="#" class="btn-grad">Learn more</a>
     </div>
   </section>
   <!-- brand -->

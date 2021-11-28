@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 * {
   margin: 0px;
@@ -593,25 +594,29 @@ a {
 /*----- bestSellers --------------------------------------------------- */
 #bestSellers {
   width: 100%;
-  padding: 180px 0;
+  padding: 80px 0;
   background: #F2EDD7; }
-  #bestSellers .inner {
+  #bestSellers .innerBS {
     width: 1180px;
     margin: 0 auto;
     position: relative;
     overflow: hidden; }
-    #bestSellers .inner .txt {
-      width: 230px;
-      padding: 50px 0; }
-      #bestSellers .inner .txt h1 {
+    #bestSellers .innerBS .txt {
+      float: left;
+      width: 240px;
+      height: 400px;
+      padding: 80px 20px;
+      align-items: center;
+      margin-right: 40px; }
+      #bestSellers .innerBS .txt h1 {
         font: normal 36px/1 'lora';
         margin-bottom: 10px;
         letter-spacing: 2px; }
-      #bestSellers .inner .txt p {
+      #bestSellers .innerBS .txt p {
         font: normal 12px/1.2 'lora';
         letter-spacing: 2px;
         margin-bottom: 30px; }
-      #bestSellers .inner .txt a {
+      #bestSellers .innerBS .txt a {
         display: block;
         width: 120px;
         height: 40px;
@@ -619,22 +624,83 @@ a {
         border: 1px solid #262223;
         text-align: center;
         color: #262223; }
-    #bestSellers .inner .con {
-      position: absolute;
-      top: 0;
-      right: -400px; }
-      #bestSellers .inner .con .wrap {
-        display: flex; }
-        #bestSellers .inner .con .wrap article {
-          width: 380px;
-          height: 300px;
-          margin-right: 20px; }
-          #bestSellers .inner .con .wrap article:last-child {
-            margin-right: 0; }
-          #bestSellers .inner .con .wrap article .pic {
+    #bestSellers .innerBS .wrapBS {
+      width: 900px;
+      height: 400px;
+      overflow: hidden;
+      position: relative;
+      /* 슬라이드 --------------------------------------------------*/
+      /*좌우버튼 --------------------------------------------------*/ }
+      #bestSellers .innerBS .wrapBS .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        /* 활성화 슬라이드 --------------------------------------------*/
+        /*활성화 슬라이드 이전, 다음 슬라이드 --------------------------*/ }
+        #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide {
+          width: 300px;
+          position: relative;
+          top: 0; }
+          #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide .inner {
             width: 100%;
-            height: 100%;
-            background: #999e85; }
+            background: #fff;
+            padding: 30px;
+            opacity: 0.4;
+            transition: 1s; }
+            #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide .inner .con {
+              position: relative; }
+              #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide .inner .con img {
+                width: 240px;
+                height: 240px;
+                object-fit: center/cover; }
+              #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide .inner .con h2 {
+                font: normal 20px/1 "lora";
+                color: #262223;
+                margin-top: 15px;
+                margin-bottom: 10px; }
+                #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide .inner .con h2::after {
+                  content: "";
+                  display: block;
+                  width: 30px;
+                  height: 1px;
+                  background: #888;
+                  margin-top: 15px;
+                  transition: all 1s 0.5s; }
+              #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide .inner .con p {
+                display: inline-block;
+                margin-right: 120px;
+                font: 13px/1.3 "arial";
+                color: #aaa;
+                letter-spacing: 1px; }
+              #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide .inner .con span {
+                font: normal 13px/1 "lora";
+                text-align: right;
+                color: #aaa; }
+        #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide-active .inner {
+          opacity: 1;
+          box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.8); }
+          #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide-active .inner .con h2::after {
+            width: 100px; }
+        #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide-prev .inner,
+        #bestSellers .innerBS .wrapBS .swiper-wrapper .swiper-slide-next .inner {
+          opacity: 0.7; }
+      #bestSellers .innerBS .wrapBS .swiper-button-prev {
+        top: auto;
+        left: auto;
+        bottom: -3%;
+        right: 10%;
+        color: #999e85;
+        padding: 10px; }
+        #bestSellers .innerBS .wrapBS .swiper-button-prev::after {
+          display: none; }
+      #bestSellers .innerBS .wrapBS .swiper-button-next {
+        top: auto;
+        left: auto;
+        bottom: -3%;
+        right: 3%;
+        color: #999e85;
+        padding: 10px; }
+        #bestSellers .innerBS .wrapBS .swiper-button-next::after {
+          display: none; }
 
 /*----- learnMore --------------------------------------------------------*/
 #banner {
