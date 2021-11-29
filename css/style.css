@@ -240,7 +240,7 @@ a {
     margin-bottom: 100px; }
     .content .sub_visual .subPic {
       width: 100%;
-      height: 400px;
+      height: 52vh;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -346,7 +346,7 @@ a {
     .content .sub_visual {
       margin-bottom: 70px; }
       .content .sub_visual .subPic {
-        height: 57%; }
+        height: 52%; }
       .content .sub_visual h1 {
         font: bold 78px/1 'lora'; }
       .content .sub_visual p {
@@ -368,7 +368,7 @@ a {
     .content .sub_visual {
       margin-bottom: 70px; }
       .content .sub_visual .subPic {
-        height: 57%; }
+        height: 54%; }
       .content .sub_visual h1 {
         font: bold 15vw/1 'lora'; }
       .content .sub_visual p {
@@ -392,10 +392,47 @@ a {
         margin: 5px; }
         #footer_sub .inner .policy li a {
           font: normal 12px/1 'lora'; } }
-.youtube .sub_visual .subPic {
+.sub_visual .subPic {
   background: url(../img/sub1.jpg) no-repeat center/cover; }
-.youtube .sub_visual p {
+.sub_visual p {
   font-family: 'Noto Sans KR'; }
+
+.youtube .vidList {
+  width: 100%; }
+  .youtube .vidList article {
+    width: 32%;
+    margin-right: 2%;
+    border: 1px solid #000; }
+    .youtube .vidList article:last-child {
+      margin-right: 0%; }
+    .youtube .vidList article strong {
+      font: 26px/1 'Noto Sans KR';
+      color: #006B6C;
+      margin-bottom: 30px; }
+    .youtube .vidList article a {
+      display: block;
+      width: 100%;
+      height: 15vh; }
+      .youtube .vidList article a img {
+        width: 100%;
+        height: 100%; }
+      .youtube .vidList article a:hover img {
+        filter: grayscale(0%); }
+    .youtube .vidList article .con {
+      width: 100%;
+      border: 1px solid #000; }
+      .youtube .vidList article .con h2 {
+        font: nomal 16px/1 'Noto Sans KR';
+        color: #262223;
+        margin-bottom: 20px; }
+      .youtube .vidList article .con p {
+        font: nomal 12px/1 'Noto Sans KR';
+        color: #262223;
+        opacity: 0.7;
+        margin-bottom: 20px; }
+      .youtube .vidList article .con span {
+        font: nomal 12px/1 'Noto Sans KR';
+        color: orange; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {
