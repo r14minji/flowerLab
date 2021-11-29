@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+KR:wght@300&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -240,7 +240,7 @@ a {
     margin-bottom: 100px; }
     .content .sub_visual .subPic {
       width: 100%;
-      height: 430px;
+      height: 400px;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -252,13 +252,15 @@ a {
       position: absolute;
       top: 36%;
       left: 5vw;
-      z-index: 1; }
+      z-index: 1;
+      transition: 0.5s 0s; }
     .content .sub_visual p {
       font: bold 30px/1.4 'lora';
       color: #262223;
       position: absolute;
       top: 50%;
-      left: 5vw; }
+      left: 5vw;
+      transition: 0.5s 1s; }
   .content .inner {
     width: 1180px;
     margin: 0 auto;
@@ -379,6 +381,11 @@ a {
         margin: 5px; }
         #footer_sub .inner .policy li a {
           font: normal 12px/1 'lora'; } }
+.youtube .sub_visual .subPic {
+  background: url(../img/sub1.jpg) no-repeat center/cover; }
+.youtube .sub_visual p {
+  font-family: 'Noto Sans KR'; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;

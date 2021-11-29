@@ -55,7 +55,6 @@ gnb_lis.forEach( li=>{
   })
 
     // 접근성-focusin
-    
     const sub = li.querySelector(".sub ul");
     if( sub != null){
       const lastEl = sub.lastElementChild;
@@ -63,7 +62,6 @@ gnb_lis.forEach( li=>{
         e.currentTarget.closest(".sub").style.display = "none";
       })
     } return;
-
 })
 
 
