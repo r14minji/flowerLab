@@ -19,7 +19,8 @@ a {
   left: 0;
   z-index: 3; }
   #header_sub.on {
-    background: #fff; }
+    background: #fff;
+    border-bottom: 1px solid #eee; }
   #header_sub .inner {
     width: 1180px;
     height: 60px;
@@ -43,29 +44,46 @@ a {
           display: inline-block;
           padding: 10px 20px;
           font: 14px/1 'lora';
-          color: #262223; }
-          #header_sub .inner .menuWeb #gnb > li > a:hover {
-            border-bottom: 3px solid #FFB799;
-            color: #999e85; }
+          color: #262223;
+          position: relative; }
+          #header_sub .inner .menuWeb #gnb > li > a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: all 350ms ease-in-out;
+            opacity: 0;
+            background: #FFB799; }
+          #header_sub .inner .menuWeb #gnb > li > a:hover::after {
+            width: 100%;
+            opacity: 1; }
+          #header_sub .inner .menuWeb #gnb > li > a.on::after {
+            width: 100%;
+            opacity: 1; }
         #header_sub .inner .menuWeb #gnb > li .sub {
           display: none;
           width: 1180px;
           height: 180px;
           background: #fff;
           position: absolute;
-          top: 40px;
+          top: 35px;
           right: -200px; }
           #header_sub .inner .menuWeb #gnb > li .sub ul {
             position: relative;
             z-index: 3; }
-            #header_sub .inner .menuWeb #gnb > li .sub ul:nth-of-type(1) {
+            #header_sub .inner .menuWeb #gnb > li .sub ul.ulAbout {
               position: absolute;
               top: 0;
-              left: 450px; }
-            #header_sub .inner .menuWeb #gnb > li .sub ul:nth-of-type(2) {
+              left: 700px;
+              z-index: 4; }
+            #header_sub .inner .menuWeb #gnb > li .sub ul.ulCom {
               position: absolute;
               top: 0;
-              left: 550px; }
+              left: 800px;
+              z-index: 4; }
             #header_sub .inner .menuWeb #gnb > li .sub ul li {
               width: 100px;
               height: 40px;
@@ -74,7 +92,11 @@ a {
               #header_sub .inner .menuWeb #gnb > li .sub ul li a {
                 color: #262223;
                 font: normal 14px/40px 'lora';
-                text-align: center; }
+                text-align: center;
+                position: relative; }
+              #header_sub .inner .menuWeb #gnb > li .sub ul li:hover a {
+                color: #006B6C;
+                font-weight: bold; }
           #header_sub .inner .menuWeb #gnb > li .sub::before {
             content: "";
             display: block;
