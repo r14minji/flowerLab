@@ -365,7 +365,8 @@ a {
   left: 0;
   z-index: 3; }
   #header.on {
-    background: #fff; }
+    background: #fff;
+    border-bottom: 1px solid #eee; }
   #header .inner {
     width: 1180px;
     height: 60px;
@@ -383,23 +384,37 @@ a {
       position: absolute;
       bottom: 0;
       right: 200px; }
+      #header .inner .menuWeb #gnb:hover .sub {
+        display: block; }
       #header .inner .menuWeb #gnb > li {
         float: left; }
         #header .inner .menuWeb #gnb > li > a {
           display: inline-block;
           padding: 10px 20px;
           font: 14px/1 'lora';
-          color: #262223; }
-          #header .inner .menuWeb #gnb > li > a:hover {
-            border-bottom: 3px solid #FFB799;
-            color: #006B6C; }
+          color: #262223;
+          position: relative; }
+          #header .inner .menuWeb #gnb > li > a::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: all 350ms ease-in-out;
+            opacity: 0;
+            background: #FFB799; }
+          #header .inner .menuWeb #gnb > li > a:hover::after {
+            width: 100%;
+            opacity: 1; }
         #header .inner .menuWeb #gnb > li .sub {
-          display: block;
+          display: none;
           width: 1180px;
           height: 180px;
           background: #fff;
           position: absolute;
-          top: 40px;
+          top: 35px;
           right: -200px; }
           #header .inner .menuWeb #gnb > li .sub ul {
             position: relative;
@@ -422,7 +437,8 @@ a {
               #header .inner .menuWeb #gnb > li .sub ul li a {
                 color: #262223;
                 font: normal 14px/40px 'lora';
-                text-align: center; }
+                text-align: center;
+                position: relative; }
               #header .inner .menuWeb #gnb > li .sub ul li:hover a {
                 color: #006B6C;
                 font-weight: bold; }

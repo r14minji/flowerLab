@@ -26,6 +26,7 @@ $menu: #006B6C;
 
   &.on {
     background: #fff;
+    border-bottom: 1px solid #eee;
   }
 
   .inner{
@@ -46,6 +47,8 @@ $menu: #006B6C;
     .menuWeb{
       #gnb{
         position: absolute; bottom: 0; right: 200px; 
+
+        &:hover .sub{ display: block}
         >li{
           float: left;
 
@@ -54,45 +57,46 @@ $menu: #006B6C;
             padding: 10px 20px;
             font: 14px/1 'lora';
             color: $txt;
-
-            &:hover{
-              border-bottom: 3px solid $hover;
-              color: $menu; 
+            position: relative;
+            &::after{
+              content: ''; display: block; 
+              position: absolute; bottom: 0; left: 0;
+              width: 0; height: 3px; transition: all 350ms ease-in-out;
+              opacity: 0; background: $hover;
             }
+            &:hover::after{width: 100%; opacity: 1;}
           }
 
           .sub{
-            //display: none;
-            display: block;
+            display: none;
             width: 1180px; height: 180px;
             background: #fff;
-            position: absolute; top: 40px; right: -200px;
+            position: absolute; top: 35px; right: -200px;
 
             ul{
               position: relative;
               z-index: 3;
-
-            &.ulAbout{
-              position: absolute; top:0; left: 700px;
-              z-index: 4;
-            }
-            &.ulCom{
-              position: absolute; top:0; left: 800px;
-              z-index: 4;
-            }
+              &.ulAbout{
+                position: absolute; top:0; left: 700px;
+                z-index: 4;
+              }
+              &.ulCom{
+                position: absolute; top:0; left: 800px;
+                z-index: 4;
+              }
 
               li{
                 width: 100px; height: 40px;               
                 background: #fff;
                 text-align: center;
-                              
+                
                 a{
                   color: $txt;
                   font: normal 14px/40px 'lora';
                   text-align: center;
+                  position: relative;
                 }
-
-                &:hover a { color: $menu; font-weight: bold;}
+                &:hover a {color: $menu;  font-weight: bold;}
               }
             }
 
