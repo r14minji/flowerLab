@@ -1,7 +1,8 @@
 const btnCall = document.querySelector(".btnCall");
 const menuMo = document.querySelector(".menuMo"); 
-const bgMo = document.querySelector(".bgMo")
-const gnbMo = document.querySelectorAll("#gnb>li");
+const gnbWeb = document.querySelector("#gnb");
+const gnb_lis = document.querySelectorAll("#gnb>li");
+
 
 // 반응형 메뉴버튼
 btnCall.addEventListener("click", e=>{
@@ -11,15 +12,40 @@ btnCall.addEventListener("click", e=>{
   menuMo.classList.toggle("on"); 
 })
 
-gnbMo.forEach( li => {
-  li.addEventListener("click", e => {
-    e.currentTarget.querySelector("div").style.display = "block";
+//반응형 2depth
+
+
+
+
+// wep - header - 2depth
+gnbWeb.addEventListener("mouseenter", e=>{
+  const sub = e.target.querySelectorAll(".sub");
+  const subArr = Array.from(sub);
+  for(let el of subArr){
+    el.style.display = "block";
+  }
+})
+gnb_lis.forEach( li=>{
+  li.addEventListener("mouseenter", e => {
+    const depth = e.currentTarget.querySelector("a");
+    depth.classList.add("on");
   })
 })
 
 
-// header - 2depth
-
+gnbWeb.addEventListener("mouseleave", e=>{
+  const sub = e.target.querySelectorAll(".sub");
+  const subArr = Array.from(sub);
+  for(let el of subArr){
+    el.style.display = "none";
+  }
+})
+gnb_lis.forEach( li=>{
+  li.addEventListener("mouseleave", e => {
+    const depth = e.currentTarget.children[0];
+    depth.classList.remove("on");
+  })
+})
 
 
 // figure - Swiper 동작 

@@ -384,8 +384,6 @@ a {
       position: absolute;
       bottom: 0;
       right: 200px; }
-      #header .inner .menuWeb #gnb:hover .sub {
-        display: block; }
       #header .inner .menuWeb #gnb > li {
         float: left; }
         #header .inner .menuWeb #gnb > li > a {
@@ -406,6 +404,9 @@ a {
             opacity: 0;
             background: #FFB799; }
           #header .inner .menuWeb #gnb > li > a:hover::after {
+            width: 100%;
+            opacity: 1; }
+          #header .inner .menuWeb #gnb > li > a.on::after {
             width: 100%;
             opacity: 1; }
         #header .inner .menuWeb #gnb > li .sub {
