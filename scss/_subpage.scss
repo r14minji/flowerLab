@@ -247,13 +247,20 @@
       color: $txt;
       margin-bottom: 60px;
       position: absolute; top: 36%; left: 5vw; z-index: 1;
-      transition: 0.5s 0s;
+      transform: translateY(60px);
+      animation: up 500ms linear forwards;
+      text-shadow: 0px 1px 1px rgba(255,255,255,1);
+      opacity: 0;
     }
     p{
       font: bold 30px/1.4 'lora';
       color: $txt;
       position: absolute; top: 50%; left: 5vw;
-      transition: 0.5s 1s; 
+      transform: translateY(60px);
+      animation: up 500ms linear forwards;
+      animation-delay: 500ms;
+      text-shadow: 0px 1px 1px rgba(255,255,255,1);
+      opacity: 0;
     }
   }
   .inner{
@@ -261,6 +268,10 @@
     margin: 0 auto;
     min-height: 500px;
   }
+}
+
+@keyframes up {
+	100% {transform: translateY(0); opacity: 1;}
 }
 
 

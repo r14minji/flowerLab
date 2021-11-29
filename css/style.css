@@ -253,19 +253,30 @@ a {
       top: 36%;
       left: 5vw;
       z-index: 1;
-      transition: 0.5s 0s; }
+      transform: translateY(60px);
+      animation: up 500ms linear forwards;
+      text-shadow: 0px 1px 1px white;
+      opacity: 0; }
     .content .sub_visual p {
       font: bold 30px/1.4 'lora';
       color: #262223;
       position: absolute;
       top: 50%;
       left: 5vw;
-      transition: 0.5s 1s; }
+      transform: translateY(60px);
+      animation: up 500ms linear forwards;
+      animation-delay: 500ms;
+      text-shadow: 0px 1px 1px white;
+      opacity: 0; }
   .content .inner {
     width: 1180px;
     margin: 0 auto;
     min-height: 500px; }
 
+@keyframes up {
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
 /*----- footer ------------------------------------------------------- */
 #footer_sub {
   width: 100%;
