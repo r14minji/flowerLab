@@ -30,6 +30,14 @@ gnb_lis.forEach( li=>{
     const depth = e.currentTarget.querySelector("a");
     depth.classList.add("on");
   })
+
+  // 접근성-focusin
+  li.addEventListener("focusin", e => {
+    const sub = e.currentTarget.querySelector(".sub");
+    if(sub != null){
+      sub.style.display = "block";
+    }return;
+  })
 })
 
 
@@ -45,6 +53,17 @@ gnb_lis.forEach( li=>{
     const depth = e.currentTarget.children[0];
     depth.classList.remove("on");
   })
+
+    // 접근성-focusin
+    
+    const sub = li.querySelector(".sub ul");
+    if( sub != null){
+      const lastEl = sub.lastElementChild;
+      lastEl.addEventListener("focusout", e => {
+        e.currentTarget.closest(".sub").style.display = "none";
+      })
+    } return;
+
 })
 
 
