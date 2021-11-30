@@ -25,8 +25,8 @@ fetch(url)
       title = title.substr(0, 80) +"...";
     }
     let description = item.snippet.description;
-    if(description.length > 500){  
-      description = description.substr(0, 500) + "...";
+    if(description.length > 400){  
+      description = description.substr(0, 400) + "...";
     }
 
     result += `
