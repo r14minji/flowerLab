@@ -398,9 +398,12 @@ a {
   font-family: 'Noto Sans KR'; }
 
 .youtube .vidList {
-  width: 100%; }
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
   .youtube .vidList article {
-    width: 32%;
+    width: 20%;
     margin-right: 2%;
     border: 1px solid #000; }
     .youtube .vidList article:last-child {

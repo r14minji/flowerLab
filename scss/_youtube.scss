@@ -10,9 +10,9 @@
 .youtube{
   .vidList{
     width: 100%;
-  
+    display: flex;  flex-wrap: wrap; justify-content: space-around;
     article{
-      width: 32%; margin-right: 2%;
+      width: 20%; margin-right: 2%;
       border: 1px solid #000;
       //height: 500px;
       &:last-child {margin-right: 0%;}
