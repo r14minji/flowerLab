@@ -54,7 +54,7 @@ a {
             left: 0;
             width: 0;
             height: 3px;
-            transition: all 350ms ease-in-out;
+            transition: all 250ms ease-in-out;
             opacity: 0;
             background: #FFB799; }
           #header_sub .inner .menuWeb #gnb > li > a:hover::after {
@@ -247,6 +247,7 @@ a {
       background: #bbb; }
     .content .sub_visual h1 {
       font: bold 90px/1 'lora';
+      letter-spacing: 4px;
       color: #262223;
       margin-bottom: 60px;
       position: absolute;
@@ -537,6 +538,12 @@ aside {
         height: 34px; }
       .youtube .vidList article p {
         height: 175px; } }
+.location .sub_visual .subPic {
+  background: url(../img/sub3.jpg) no-repeat center/cover;
+  filter: grayscale(80%); }
+.location .sub_visual p {
+  font-family: 'Noto Sans KR'; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
@@ -580,7 +587,7 @@ aside {
             left: 0;
             width: 0;
             height: 3px;
-            transition: all 350ms ease-in-out;
+            transition: all 250ms ease-in-out;
             opacity: 0;
             background: #FFB799; }
           #header .inner .menuWeb #gnb > li > a:hover::after {

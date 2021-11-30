@@ -5,6 +5,7 @@ $tablet: 1179px;
 $middle : 799px;
 $mobile: 539px;
 // 중간 760  에서  미디어쿼리 만들기, 베스트셀이랑, 스토리
+//  320    640     1024
 
 $base: #F2EDD7;
 $core: #999e85;
@@ -15,7 +16,7 @@ $menu: #006B6C;
 @import 'reset.scss';
 @import 'subpage.scss';
 @import 'youtube.scss';
-
+@import 'location.scss';
 
 
 /* ----- header ---------------------------------------------------------*/
@@ -61,7 +62,7 @@ $menu: #006B6C;
             &::after{
               content: ''; display: block; 
               position: absolute; bottom: 0; left: 0;
-              width: 0; height: 3px; transition: all 350ms ease-in-out;
+              width: 0; height: 3px; transition: all 250ms ease-in-out;
               opacity: 0; background: $hover;
             }
             &:hover::after{width: 100%; opacity: 1;}
