@@ -19,10 +19,21 @@ fetch(url)
   let count = 0;
   items.forEach( item => {
     count ++;
+
+    let title = item.snippet.title;
+    if( title.length > 80) { 
+      title = title.substr(0, 80) +"...";
+    }
+    let description = item.snippet.description;
+    if(description.length > 500){  
+      description = description.substr(0, 500) + "...";
+    }
+
     result += `
     <article>
       <strong>0${count}</strong>
-      <h2>${item.snippet.title}</h2>
+      <h2>${title}</h2>
+      <p>${description}</p>
       <a href="${item.snippet.resourceId.videoId} class="pic">
         <img src="${item.snippet.thumbnails.medium.url}">
       </a>
