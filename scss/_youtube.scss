@@ -116,18 +116,57 @@ aside{
       cursor: pointer;
     }
   }
-
 }
 
-/*
+
+
+@media screen and (max-width: $tablet){
+  .youtube{
+    .vidList{
+      width: 100%;
+      display: flex;  flex-wrap: wrap; justify-content: space-around; 
+      article{
+        //display: none;
+        width: 30%; 
+
         p{
-          font: nomal 12px/1 'Noto Sans KR';
-          color: $txt; opacity: 0.7;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+//816
+@media screen and (max-width: 816px){
+  .youtube{
+    .vidList{
+      width: 100%;
+      display: flex;  flex-wrap: wrap; justify-content: space-around; 
+      article{
+        //display: none;
+        width: 43%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .youtube{
+    .vidList{
+      width: 100%;
+      display: flex;  flex-wrap: wrap; justify-content: space-around; 
+      article{
+        //display: none;
+        width: 90%; 
+        h2{
           margin-bottom: 20px;
+          height: 34px;
         }
-        span{
-          font: nomal 12px/1 'Noto Sans KR';
-          color: orange; 
+        p{
+          height: 175px;
         }
-*/
+      }
+    }
+  }
+}
 

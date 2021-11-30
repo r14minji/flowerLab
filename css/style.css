@@ -506,17 +506,37 @@ aside {
       color: orange;
       cursor: pointer; }
 
-/*
-        p{
-          font: nomal 12px/1 'Noto Sans KR';
-          color: $txt; opacity: 0.7;
-          margin-bottom: 20px;
-        }
-        span{
-          font: nomal 12px/1 'Noto Sans KR';
-          color: orange; 
-        }
-*/
+@media screen and (max-width: 1179px) {
+  .youtube .vidList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .youtube .vidList article {
+      width: 30%; }
+      .youtube .vidList article p {
+        overflow: hidden; } }
+@media screen and (max-width: 816px) {
+  .youtube .vidList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .youtube .vidList article {
+      width: 43%; } }
+@media screen and (max-width: 539px) {
+  .youtube .vidList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .youtube .vidList article {
+      width: 90%; }
+      .youtube .vidList article h2 {
+        margin-bottom: 20px;
+        height: 34px; }
+      .youtube .vidList article p {
+        height: 175px; } }
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
