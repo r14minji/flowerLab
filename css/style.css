@@ -544,6 +544,71 @@ aside {
 .location .sub_visual p {
   font-family: 'Noto Sans KR'; }
 
+.location #tab {
+  width: 100%;
+  padding-top: 40px;
+  position: relative; }
+  .location #tab dt {
+    width: calc(100% / 3);
+    height: 40px;
+    position: absolute;
+    top: 0; }
+    .location #tab dt:nth-of-type(1) {
+      left: calc((100% / 3) * 0); }
+    .location #tab dt:nth-of-type(2) {
+      left: calc((100% / 3) * 1); }
+    .location #tab dt:nth-of-type(3) {
+      left: calc((100% / 3) * 2); }
+    .location #tab dt a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #F2EDD7;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      background: #eee;
+      font: bold 20px/40px "Noto Sans KR";
+      color: #aaa;
+      text-align: center; }
+    .location #tab dt:hover a {
+      background: #FFB799;
+      color: #262223; }
+    .location #tab dt.on a {
+      background: #FFB799;
+      color: #262223; }
+  .location #tab dd {
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    display: none; }
+    .location #tab dd.on {
+      display: block; }
+    .location #tab dd .wrap {
+      width: 100%; }
+      .location #tab dd .wrap ul {
+        padding: 70px 50px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .location #tab dd .wrap ul li {
+          margin-bottom: 20px; }
+          .location #tab dd .wrap ul li h2 {
+            font: bold 20px/1 'noto sans';
+            color: #000;
+            margin-bottom: 10px; }
+          .location #tab dd .wrap ul li strong {
+            display: inline-block;
+            font: bold 16px/1 "noto sans";
+            color: #aaa; }
+          .location #tab dd .wrap ul li span {
+            display: inline-block;
+            font: normal 16px/1 "noto sans kr";
+            color: #262223; }
+      .location #tab dd .wrap #map {
+        width: 100%;
+        height: 500px;
+        border: 1px solid #000; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;

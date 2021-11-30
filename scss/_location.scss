@@ -10,3 +10,66 @@
     }
   }
 }
+
+.location{
+  #tab{
+    width: 100%; 
+    padding-top: 40px;
+    position: relative;
+
+    dt{
+      width: calc(100% / 3);  height: 40px;
+      position: absolute; 
+      top: 0;
+      &:nth-of-type(1) {left: calc((100% / 3) * 0);}
+      &:nth-of-type(2) {left: calc((100% / 3) * 1);}
+      &:nth-of-type(3) {left: calc((100% / 3) * 2);}
+      
+      a{
+        display: block; width: 100%; height: 100%;
+        border: 1px solid $base; border-top-left-radius: 20px; border-top-right-radius: 20px; background: #eee;
+        font: bold 20px/40px "Noto Sans KR"; color: #aaa;
+        text-align: center; 
+      }
+
+      &:hover a{ background: $hover; color: $txt; }
+      &.on a{ background: $hover; color: $txt;}
+    }
+
+    dd{
+      width: 100%; height: 600px;
+      background: #fff;
+      display: none;
+      &.on {display: block;}
+
+      .wrap{
+        width: 100%;
+
+        ul{
+          padding: 70px 50px 10px;
+          display: flex; justify-content: space-between; align-items: center;
+        
+          li{
+            margin-bottom: 20px;
+            h2{
+              font: bold 20px/1 'noto sans'; color: #000;
+              margin-bottom: 10px;
+            }
+            strong{
+              display: inline-block;
+              font: bold 16px/1 'noto sans' ; color: #aaa;
+            }
+            span{
+              display: inline-block;
+              font: normal 16px/1 'noto sans kr' ; color: $txt;
+            }
+          }
+        }
+        #map{
+          width: 100%; height: 500px;
+          border: 1px solid #000;
+        }
+      }
+    }
+  }
+}
