@@ -84,7 +84,7 @@ aside{
     justify-content:space-between; 
 
     .con{
-      width: 25%; height: 100%;
+      width: 20%; height: 100%;
     
       strong{
         display: block;
@@ -112,7 +112,8 @@ aside{
 
     span{
       position: absolute; top: -45px; right: 0;
-      color: #fff;
+      color: orange;
+      cursor: pointer;
     }
   }
 

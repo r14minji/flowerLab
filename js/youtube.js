@@ -36,7 +36,7 @@ fetch(url)
       <strong>0${count}</strong>
       <h2>${title}</h2>
       <p>${description}</p>
-      <a href="${item.snippet.resourceId.videoId} class="pic">
+      <a href="${item.snippet.resourceId.videoId}" class="pic">
         <img src="${item.snippet.thumbnails.medium.url}">
       </a>
     </article>
@@ -46,11 +46,12 @@ fetch(url)
 })
 
 
-
+//팝업생성
 vidList.addEventListener("click", e => {
   e.preventDefault();
 
   const vidId = e.target.closest("article").querySelector("a").getAttribute("href");
+  console.log(vidId);
   const count = e.target.closest("article").querySelector("strong").innerText;  
   const title = e.target.closest("article").querySelector("h2").innerText;  
   const des = e.target.closest("article").querySelector("p").innerText;  
@@ -74,9 +75,16 @@ vidList.addEventListener("click", e => {
   section.append(pop);
 })
 
+
+//팝업 닫기
 section.addEventListener("click", e=> {
-  const pop = e.target.querySelector("aside");
-  if(pop == null) return
-  
+  const pop = e.currentTarget.querySelector("aside");
+  if(pop != null) {
+    const close = pop.querySelector("span");
+    if(e.target == close){
+      pop.remove();
+      body.style.overflow = "visible";
+    }
+  }
 })
 
