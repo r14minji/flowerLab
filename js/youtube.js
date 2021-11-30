@@ -1,3 +1,5 @@
+const body = document.querySelector("body");
+const section = document.querySelector(".youtube");
 const vidList = document.querySelector(".vidList");
 
 
@@ -12,7 +14,7 @@ fetch(url)
   return data.json();
 })
 .then( json => {
-  console.log(json.items);
+  //console.log(json.items);
 
   const items = json.items;
   let result = '';
@@ -42,3 +44,39 @@ fetch(url)
   });
   vidList.innerHTML = result;
 })
+
+
+
+vidList.addEventListener("click", e => {
+  e.preventDefault();
+
+  const vidId = e.target.closest("article").querySelector("a").getAttribute("href");
+  const count = e.target.closest("article").querySelector("strong").innerText;  
+  const title = e.target.closest("article").querySelector("h2").innerText;  
+  const des = e.target.closest("article").querySelector("p").innerText;  
+
+  const pop = document.createElement("aside");
+  pop.classList.add("pop");
+
+  body.style.overflow = "hidden";
+
+  pop.innerHTML = `
+    <div class="inner">
+      <div class="con">
+        <strong>${count}</strong>
+        <h1>${title}</h1>
+        <p>${des}</p>
+      </div>
+      <iframe src="https://www.youtube.com/embed/${vidId}" frameborder="0" height="100%" allowfullscreen ></iframe>
+      <span>Close</span>
+    </div>
+  `
+  section.append(pop);
+})
+
+section.addEventListener("click", e=> {
+  const pop = e.target.querySelector("aside");
+  if(pop == null) return
+  
+})
+
