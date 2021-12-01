@@ -123,7 +123,8 @@ a {
       bottom: 0;
       right: 0px; }
       #header_sub .inner .menuWeb .util > li {
-        float: left; }
+        float: left;
+        position: relative; }
         #header_sub .inner .menuWeb .util > li > a {
           display: inline-block;
           padding: 10px;
@@ -132,6 +133,32 @@ a {
           #header_sub .inner .menuWeb .util > li > a:hover {
             background: #FFB799;
             color: #F2EDD7; }
+        #header_sub .inner .menuWeb .util > li.on a {
+          background: #FFB799;
+          color: #F2EDD7; }
+        #header_sub .inner .menuWeb .util > li .sub {
+          display: none;
+          width: 100px;
+          position: absolute;
+          top: 35px;
+          left: -32px; }
+          #header_sub .inner .menuWeb .util > li .sub ul li {
+            width: 100%; }
+            #header_sub .inner .menuWeb .util > li .sub ul li a {
+              display: block;
+              height: 35px;
+              font: bold 13px/35px 'noto sans kr';
+              color: #fff;
+              background: #FFB799;
+              opacity: 0.8;
+              text-align: center; }
+            #header_sub .inner .menuWeb .util > li .sub ul li:hover a {
+              opacity: 1;
+              color: #262223; }
+        #header_sub .inner .menuWeb .util > li.on .sub {
+          display: block; }
+        #header_sub .inner .menuWeb .util > li:hover .sub {
+          display: block; }
     #header_sub .inner .btnCall {
       display: none;
       width: 20px;
@@ -869,6 +896,32 @@ main {
           #header .inner .menuWeb .util > li > a:hover {
             background: #FFB799;
             color: #F2EDD7; }
+        #header .inner .menuWeb .util > li.on a {
+          background: #FFB799;
+          color: #F2EDD7; }
+        #header .inner .menuWeb .util > li .sub {
+          display: none;
+          width: 100px;
+          position: absolute;
+          top: 35px;
+          left: -32px; }
+          #header .inner .menuWeb .util > li .sub ul li {
+            width: 100%; }
+            #header .inner .menuWeb .util > li .sub ul li a {
+              display: block;
+              height: 35px;
+              font: bold 13px/35px 'noto sans kr';
+              color: #fff;
+              background: #FFB799;
+              opacity: 0.8;
+              text-align: center; }
+            #header .inner .menuWeb .util > li .sub ul li:hover a {
+              opacity: 1;
+              color: #262223; }
+        #header .inner .menuWeb .util > li.on .sub {
+          display: block; }
+        #header .inner .menuWeb .util > li:hover .sub {
+          display: block; }
     #header .inner .btnCall {
       display: none;
       width: 20px;

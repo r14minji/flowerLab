@@ -1,6 +1,8 @@
 const btnCall = document.querySelector(".btnCall");
 const menuMo = document.querySelector(".menuMo"); 
 const gnbWeb = document.querySelector("#gnb");
+const utilWeb = document.querySelector(".util"); 
+const util_li = document.querySelector(".util>li");
 const gnb_lis = document.querySelectorAll("#gnb>li");
 
 
@@ -12,8 +14,42 @@ btnCall.addEventListener("click", e=>{
   menuMo.classList.toggle("on"); 
 })
 
+// wep - header - util -2depth
+utilWeb.addEventListener("mouseenter", e=> {
+  const sub = e.target.querySelector(".sub");
+  sub.style.display = "block";
+  //sub.classList.add("on");
+  const li = e.target.querySelector("li");
+  li.classList.add("on");
+})
 
-// wep - header - 2depth
+util_li.addEventListener("focusin", e => {
+  const sub = e.currentTarget.querySelector(".sub");
+  console.log(sub);
+  if(sub != null){
+    sub.style.display = "block";
+  }
+})
+
+
+utilWeb.addEventListener("mouseleave", e=> {
+  const sub = e.target.querySelector(".sub");
+  sub.style.display = "none";
+  //sub.classList.add("on");
+  const li = e.target.querySelector("li");
+  li.classList.remove("on");
+})
+
+const utilSub = util_li.querySelector(".sub ul");
+if(utilSub != null){
+  const lastEl = utilSub.lastElementChild;
+  lastEl.addEventListener("focusout", e=>{
+    e.currentTarget.closest(".sub").style.display = "none";
+  })
+}
+
+
+// web - header - gnb - 2depth
 gnbWeb.addEventListener("mouseenter", e=>{
   const sub = e.target.querySelectorAll(".sub");
   const subArr = Array.from(sub);
@@ -44,14 +80,16 @@ gnbWeb.addEventListener("mouseleave", e=>{
     el.style.display = "none";
   }
 })
+
 gnb_lis.forEach( li=>{
   li.addEventListener("mouseleave", e => {
     const depth = e.currentTarget.children[0];
     depth.classList.remove("on");
   })
 
-    // 접근성-focusin
+    // 접근성-focuout
     const sub = li.querySelector(".sub ul");
+    //console.log(sub.lastElementChild);
     if( sub != null){
       const lastEl = sub.lastElementChild;
       lastEl.addEventListener("focusout", e => {

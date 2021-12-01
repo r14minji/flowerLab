@@ -132,6 +132,25 @@ $menu: #006B6C;
               color: $base;
             }
           } 
+          &.on a{background: $hover; color: $base;}
+          .sub{
+            display: none;
+            width: 100px;
+            position: absolute; top: 35px; left: -32px;
+
+            ul li{
+              width: 100%;
+              a{
+                display: block; height: 35px;
+                font: bold 13px/35px 'noto sans kr'; color: #fff; 
+                background: $hover; opacity: 0.8;
+                text-align: center;
+              }
+              &:hover a{opacity: 1; color: $txt;}
+            }
+          }
+          &.on .sub{display: block;}
+          &:hover .sub{display: block;}
         }
       }
     }
