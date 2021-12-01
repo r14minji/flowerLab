@@ -1,32 +1,33 @@
-.login{
-  padding: 0 0 150px;
+#header_user{
+  position: absolute; top: 0; left: 0;
+  width: 514px; // 450 줄었다가, 모바일 없어짐
+  height: 100vh;
 
-  .log_sub{
-    width: 250px;
-    background: $base; opacity: 0.8;
-    margin-bottom: 100px;
-  }
+  background: #ddd;
 }
 
-.login{
+main{
+  margin-left: 514px;
+  padding: 20px;
+
+  background: #eee;
+
+  nav{
+    border: 1px solid #000;
+  }
   .inner{
-    position: relative;
-
-    h1{
-      font:normal 50px/1 'lora'; 
-      color:#000; 
-      margin-bottom:60px; 
+    width: 100%;
+    margin: 0 auto;
     
-      span{
-        font:normal 20px/1 "맑은 고딕"; 
-        color:#aaa; 
-
-        &::before{
-          content:'/'; 
-          margin-right:20px; 
-          margin-left:10px; 
-        }
-      }
+    h2{
+      text-align: center;
+    }
+    fieldset{
+      padding: 10px;
+    }
+    .sns{
+      border: 1px solid #000;
     }
   }
 }
+

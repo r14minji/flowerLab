@@ -733,27 +733,29 @@ aside {
         border-bottom: 1px solid #000;
         opacity: 1; }
 
-.login {
-  padding: 0 0 150px; }
-  .login .log_sub {
-    width: 250px;
-    background: #F2EDD7;
-    opacity: 0.8;
-    margin-bottom: 100px; }
+#header_user {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 514px;
+  height: 100vh;
+  background: #ddd; }
 
-.login .inner {
-  position: relative; }
-  .login .inner h1 {
-    font: normal 50px/1 'lora';
-    color: #000;
-    margin-bottom: 60px; }
-    .login .inner h1 span {
-      font: normal 20px/1 "맑은 고딕";
-      color: #aaa; }
-      .login .inner h1 span::before {
-        content: '/';
-        margin-right: 20px;
-        margin-left: 10px; }
+main {
+  margin-left: 514px;
+  padding: 20px;
+  background: #eee; }
+  main nav {
+    border: 1px solid #000; }
+  main .inner {
+    width: 100%;
+    margin: 0 auto; }
+    main .inner h2 {
+      text-align: center; }
+    main .inner fieldset {
+      padding: 10px; }
+    main .inner .sns {
+      border: 1px solid #000; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {
