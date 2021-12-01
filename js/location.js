@@ -1,4 +1,7 @@
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+let drag = true;
+let zoom =false; 
+
 
 var options = { //지도를 생성할 때 필요한 기본 옵션
 	center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
@@ -9,28 +12,46 @@ var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리
 
 
 
-setZoomable(false);
-setDraggable(true);
 
 
+var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition, 
+    image: markerImage // 마커이미지 설정 
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);  
+
+//지도이동시키기 함수 (중요)
+setCenter(markerPosition)
+function setCenter(target) {            
+	var moveLatLon = target;
+	
+	map.setCenter(moveLatLon);
+}
+
+
+//지도에 컨트롤 올리기
 var mapTypeControl = new kakao.maps.MapTypeControl();
-
-// 지도에 컨트롤을 추가해야 지도위에 표시됩니다
-// kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
 map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-
-// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
 var zoomControl = new kakao.maps.ZoomControl();
 map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-
-
+// 마우스 드레그 불가, 줌 가능
+setZoomable(zoom);
 function setZoomable(zoomable) {
-	// 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
 	map.setZoomable(zoomable);    
 }
-
+setDraggable(drag);
 function setDraggable(draggable) {
-	// 마우스 드래그로 지도 이동 가능여부를 설정합니다
 	map.setDraggable(draggable);    
 }
