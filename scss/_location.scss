@@ -37,7 +37,7 @@
     }
 
     dd{
-      width: 100%; height: 600px;
+      width: 100%; 
       background: #fff;
       display: none;
       &.on {display: block;}
@@ -69,11 +69,12 @@
             }
           }
         }
-        #map{
-          width: 100%; height: 500px;
-          border: 1px solid #000;
-        }
       }
+    }
+
+    #map{
+      width: 100%; height: 500px;
+      
     }
   }
 }

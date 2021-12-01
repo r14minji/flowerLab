@@ -578,7 +578,6 @@ aside {
       color: #262223; }
   .location #tab dd {
     width: 100%;
-    height: 600px;
     background: #fff;
     display: none; }
     .location #tab dd.on {
@@ -608,10 +607,9 @@ aside {
             display: inline-block;
             font: normal 16px/1 "noto sans kr";
             color: #262223; }
-      .location #tab dd .wrap #map {
-        width: 100%;
-        height: 500px;
-        border: 1px solid #000; }
+  .location #tab #map {
+    width: 100%;
+    height: 500px; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {
