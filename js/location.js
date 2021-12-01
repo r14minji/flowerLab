@@ -1,4 +1,7 @@
 var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+const dts = document.querySelectorAll("dt");
+const dts_a = document.querySelectorAll("dt>a");
+const dds = document.querySelectorAll("dd");
 let drag = true;
 let zoom =false; 
 
@@ -22,6 +25,7 @@ var positions = [
 			imgSrc: "img/mark1.png",
 			imgSize: new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
 			imgOption: {offset: new kakao.maps.Point(27, 69)},
+			button : dts_a[0],
 	},
 	{
 			title: '본사 신관', 
@@ -29,6 +33,7 @@ var positions = [
 			imgSrc: "img/mark2.png",
 			imgSize : new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
 			imgOption : {offset: new kakao.maps.Point(27, 69)},
+			button : dts_a[1],
 	},
 	{
 			title: '제주  지사', 
@@ -36,6 +41,7 @@ var positions = [
 			imgSrc : "img/mark3.png",
 			imgSize : new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
 			imgOption : {offset: new kakao.maps.Point(27, 69)},
+			button : dts_a[2],
 	},
 ];
 
@@ -50,39 +56,30 @@ for (var i = 0; i < positions.length; i ++) {
 			image : new kakao.maps.MarkerImage(positions[i].imgSrc, positions[i].imgSize, positions[i].imgOption) // 마커 이미지 
 	});
 
-	setCenter(positions[i].latlng)
+
+	positions[i].button.addEventListener("click", e => {
+		e.preventDefault();
+		setCenter(positions[i].latlng);
+	})
 }
 
 
+// 탭 클릭시 컨텐츠 이동
+dts.forEach(( el , index) => {
+	el.addEventListener("click", e => {
+		let isOn = e.currentTarget.classList.contains("on");
+		if (isOn) return;
+		activation(dts, index);
+		activation(dds, index);
+	})
+})
 
-
-
-var imageSrc = 'img/mark1.png', // 마커이미지의 주소입니다    
-    imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
-    imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-      
-// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-    markerPosition = new kakao.maps.LatLng(37.54699, 127.09598); // 마커가 표시될 위치입니다
-
-// 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    position: markerPosition, 
-    image: markerImage // 마커이미지 설정 
-});
-
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);  
-
-
-
-
-
-
-
-
-
-
+function activation(arr, index){
+	for( let i of arr){
+		i.classList.remove("on");
+	}
+	arr[index].classList.add("on");
+}
 
 
 
