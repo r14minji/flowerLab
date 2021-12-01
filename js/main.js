@@ -2,7 +2,8 @@ const btnCall = document.querySelector(".btnCall");
 const menuMo = document.querySelector(".menuMo"); 
 const gnbWeb = document.querySelector("#gnb");
 const utilWeb = document.querySelector(".util"); 
-const util_li = document.querySelector(".util>li");
+const util_lis = document.querySelectorAll(".util>li");
+const user = util_lis[0]
 const gnb_lis = document.querySelectorAll("#gnb>li");
 
 
@@ -14,39 +15,46 @@ btnCall.addEventListener("click", e=>{
   menuMo.classList.toggle("on"); 
 })
 
-// wep - header - util -2depth
-utilWeb.addEventListener("mouseenter", e=> {
-  const sub = e.target.querySelector(".sub");
+// user 클릭이벤트
+user.addEventListener("click", e =>{
+  e.preventDefault();
+  const sub = e.currentTarget.querySelector(".sub");
   sub.style.display = "block";
-  //sub.classList.add("on");
-  const li = e.target.querySelector("li");
-  li.classList.add("on");
 })
 
-util_li.addEventListener("focusin", e => {
-  const sub = e.currentTarget.querySelector(".sub");
-  console.log(sub);
-  if(sub != null){
-    sub.style.display = "block";
+// wep - header - util -2depth
+util_lis.forEach(el =>{
+  el.addEventListener("mouseenter", e=> {
+    e.currentTarget.classList.add("on");
+  })
+
+  el.addEventListener("focusin", e => {
+    const sub = e.currentTarget.querySelector(".sub");
+    if(sub != null){
+      sub.style.display = "block";
+    }
+  })
+})
+
+
+util_lis.forEach(el => {
+  el.addEventListener("mouseleave", e=> {
+    const sub = e.currentTarget.querySelector(".sub");
+    e.currentTarget.classList.remove("on");
+    if(sub != null){sub.style.display = "none";}
+  })
+  
+  const utilSub = el.querySelector(".sub ul");
+  if(utilSub != null){
+    const lastEl = utilSub.lastElementChild;
+    lastEl.addEventListener("focusout", e=>{
+      e.currentTarget.closest(".sub").style.display = "none";
+    })
   }
 })
 
 
-utilWeb.addEventListener("mouseleave", e=> {
-  const sub = e.target.querySelector(".sub");
-  sub.style.display = "none";
-  //sub.classList.add("on");
-  const li = e.target.querySelector("li");
-  li.classList.remove("on");
-})
 
-const utilSub = util_li.querySelector(".sub ul");
-if(utilSub != null){
-  const lastEl = utilSub.lastElementChild;
-  lastEl.addEventListener("focusout", e=>{
-    e.currentTarget.closest(".sub").style.display = "none";
-  })
-}
 
 
 // web - header - gnb - 2depth
@@ -57,6 +65,7 @@ gnbWeb.addEventListener("mouseenter", e=>{
     el.style.display = "block";
   }
 })
+
 gnb_lis.forEach( li=>{
   li.addEventListener("mouseenter", e => {
     const depth = e.currentTarget.querySelector("a");
