@@ -12,10 +12,6 @@ btnCall.addEventListener("click", e=>{
   menuMo.classList.toggle("on"); 
 })
 
-//반응형 2depth
-
-
-
 
 // wep - header - 2depth
 gnbWeb.addEventListener("mouseenter", e=>{

@@ -1,0 +1,32 @@
+.login{
+  padding: 0 0 150px;
+
+  .log_sub{
+    width: 250px;
+    background: $base; opacity: 0.8;
+    margin-bottom: 100px;
+  }
+}
+
+.login{
+  .inner{
+    position: relative;
+
+    h1{
+      font:normal 50px/1 'lora'; 
+      color:#000; 
+      margin-bottom:60px; 
+    
+      span{
+        font:normal 20px/1 "맑은 고딕"; 
+        color:#aaa; 
+
+        &::before{
+          content:'/'; 
+          margin-right:20px; 
+          margin-left:10px; 
+        }
+      }
+    }
+  }
+}

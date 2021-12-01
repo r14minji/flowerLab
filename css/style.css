@@ -733,6 +733,28 @@ aside {
         border-bottom: 1px solid #000;
         opacity: 1; }
 
+.login {
+  padding: 0 0 150px; }
+  .login .log_sub {
+    width: 250px;
+    background: #F2EDD7;
+    opacity: 0.8;
+    margin-bottom: 100px; }
+
+.login .inner {
+  position: relative; }
+  .login .inner h1 {
+    font: normal 50px/1 'lora';
+    color: #000;
+    margin-bottom: 60px; }
+    .login .inner h1 span {
+      font: normal 20px/1 "맑은 고딕";
+      color: #aaa; }
+      .login .inner h1 span::before {
+        content: '/';
+        margin-right: 20px;
+        margin-left: 10px; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
@@ -835,7 +857,8 @@ aside {
       bottom: 0;
       right: 0px; }
       #header .inner .menuWeb .util > li {
-        float: left; }
+        float: left;
+        position: relative; }
         #header .inner .menuWeb .util > li > a {
           display: inline-block;
           padding: 10px;
