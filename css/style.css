@@ -585,14 +585,18 @@ aside {
       display: block; }
     .location #tab dd .wrap {
       width: 100%; }
+      .location #tab dd .wrap h2 {
+        font: bold 40px/1 'noto sans';
+        color: #000;
+        margin: 50px 10px 50px 40px; }
       .location #tab dd .wrap ul {
-        padding: 70px 50px 10px;
+        padding: 10px 50px 10px;
         display: flex;
         justify-content: space-between;
         align-items: center; }
         .location #tab dd .wrap ul li {
           margin-bottom: 20px; }
-          .location #tab dd .wrap ul li h2 {
+          .location #tab dd .wrap ul li p {
             font: bold 20px/1 'noto sans';
             color: #000;
             margin-bottom: 10px; }

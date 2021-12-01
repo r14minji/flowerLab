@@ -64,8 +64,10 @@ gnb_lis.forEach( li=>{
     } return;
 })
 
-
-// figure - Swiper 동작 
+// index페이지에서만 사용. sub페이지 오류 잡기
+const wrapBS = document.querySelector(".wrapBS");
+if(wrapBS  != null){
+  // figure - Swiper 동작 
 const swiper = new Swiper('.wrapBS', {
   effect: "coverflow",
   coverflowEffect: {
@@ -84,8 +86,6 @@ const swiper = new Swiper('.wrapBS', {
   centeredSlides: true,
   grabCursor: true, //스와이프시 마우스 커서모양 변경 
 
-
-
   // 페이징버튼 옵션 
   pagination: {
     el: '.swiper-pagination',
@@ -97,5 +97,5 @@ const swiper = new Swiper('.wrapBS', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
 });
+}

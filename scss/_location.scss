@@ -44,14 +44,18 @@
 
       .wrap{
         width: 100%;
-
+        h2{
+          font: bold 40px/1 'noto sans'; color: #000;
+          margin: 50px 10px 50px 40px;
+        }
         ul{
-          padding: 70px 50px 10px;
+          padding: 10px 50px 10px;
           display: flex; justify-content: space-between; align-items: center;
-        
+          
           li{
             margin-bottom: 20px;
-            h2{
+
+            p{
               font: bold 20px/1 'noto sans'; color: #000;
               margin-bottom: 10px;
             }
