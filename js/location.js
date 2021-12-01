@@ -14,7 +14,50 @@ var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리
 
 
 
-var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png', // 마커이미지의 주소입니다    
+// 마커를 표시할 위치와 title 객체 배열입니다 
+var positions = [
+	{
+			title: '본사 본관', 
+			latlng: new kakao.maps.LatLng(37.4960228,127.0377661),
+			imgSrc: "img/mark1.png",
+			imgSize: new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+			imgOption: {offset: new kakao.maps.Point(27, 69)},
+	},
+	{
+			title: '본사 신관', 
+			latlng: new kakao.maps.LatLng(37.5586026,126.932745),
+			imgSrc: "img/mark2.png",
+			imgSize : new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+			imgOption : {offset: new kakao.maps.Point(27, 69)},
+	},
+	{
+			title: '제주  지사', 
+			latlng: new kakao.maps.LatLng(33.5054319,126.4649369),
+			imgSrc : "img/mark3.png",
+			imgSize : new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+			imgOption : {offset: new kakao.maps.Point(27, 69)},
+	},
+];
+
+	
+for (var i = 0; i < positions.length; i ++) {
+
+	// 마커를 생성합니다
+	var marker = new kakao.maps.Marker({
+			map: map, // 마커를 표시할 지도
+			position: positions[i].latlng, // 마커를 표시할 위치
+			title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+			image : new kakao.maps.MarkerImage(positions[i].imgSrc, positions[i].imgSize, positions[i].imgOption) // 마커 이미지 
+	});
+
+	setCenter(positions[i].latlng)
+}
+
+
+
+
+
+var imageSrc = 'img/mark1.png', // 마커이미지의 주소입니다    
     imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
     imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
       
@@ -31,14 +74,25 @@ var marker = new kakao.maps.Marker({
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);  
 
+
+
+
+
+
+
+
+
+
+
+
+
 //지도이동시키기 함수 (중요)
-setCenter(markerPosition)
+
 function setCenter(target) {            
 	var moveLatLon = target;
 	
 	map.setCenter(moveLatLon);
 }
-
 
 //지도에 컨트롤 올리기
 var mapTypeControl = new kakao.maps.MapTypeControl();
