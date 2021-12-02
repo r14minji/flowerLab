@@ -1,33 +1,81 @@
-#header_user{
-  position: absolute; top: 0; left: 0;
-  width: 514px; // 450 줄었다가, 모바일 없어짐
+.container{
+  display: flex;
+  flex-direction: row;
   height: 100vh;
+  overflow: hidden;
 
-  background: #ddd;
-}
 
-main{
-  margin-left: 514px;
-  padding: 20px;
-
-  background: #eee;
-
-  nav{
-    border: 1px solid #000;
-  }
-  .inner{
-    width: 100%;
-    margin: 0 auto;
-    
-    h2{
-      text-align: center;
+  section{
+    width: 514px; height: 100vh;
+    background: $hover;
+    display: flex; flex-direction: column; justify-content: space-between;
+    #header_user{
+      h1{
+        margin: 50px 0 20px;
+        text-align: center;
+        font: bold 36px/1 'lora';
+        a{ color: $txt;}
+      }
+      p{
+        font: normal 16px/1 'lora';
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
-    fieldset{
-      padding: 10px;
-    }
-    .sns{
-      border: 1px solid #000;
+    .inner{
+      border: 1px solid green;
     }
   }
+
+  main{
+    display:flex; flex-direction: column;
+    flex:1; overflow: auto;
+  
+    nav{
+    display: flex; flex-grow: 0; align-items: center; justify-content: flex-end;
+    padding: 30px 30px 0;
+    background: lightgreen;
+      p{
+        font: 13px/1 'noto sans kr';
+        a{
+          margin-left: 10px;
+          color:rgb(27, 27, 212)
+        }
+      }
+    }
+    .inner{
+
+      display: flex; flex-grow: 1; align-items: center; justify-content: center; 
+      background: #eee;
+  
+      h2{
+        font: bold 24px/1 'noto sans kr'; color: #000;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+  
+      .sns{
+        margin-top: 40px; padding: 20px;
+        margin: 0 auto;
+        p{
+          font: bold 14px/1 'noto sans kr';
+          text-align: center; color: #555;
+          margin-bottom: 20px;
+        }
+        ul{
+          display: flex; justify-content: space-around; align-items: center;
+          padding: 0 150px;
+          li{
+            width: 50px;height: 50px;
+            border-radius: 50%; text-align: center;
+            font: 20px/50px 'noto sans';
+            background: #eee; color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
+
 
