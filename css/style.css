@@ -130,12 +130,6 @@ a {
           padding: 10px;
           font: 14px/1 'lora';
           color: #262223; }
-          #header_sub .inner .menuWeb .util > li > a:hover {
-            background: #FFB799;
-            color: #F2EDD7; }
-        #header_sub .inner .menuWeb .util > li.on a {
-          background: #FFB799;
-          color: #F2EDD7; }
         #header_sub .inner .menuWeb .util > li .sub {
           display: none;
           width: 100px;
@@ -155,10 +149,6 @@ a {
             #header_sub .inner .menuWeb .util > li .sub ul li:hover a {
               opacity: 1;
               color: #262223; }
-        #header_sub .inner .menuWeb .util > li.on .sub {
-          display: block; }
-        #header_sub .inner .menuWeb .util > li:hover .sub {
-          display: block; }
     #header_sub .inner .btnCall {
       display: none;
       width: 20px;
