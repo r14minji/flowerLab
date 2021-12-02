@@ -10,7 +10,7 @@
     display: flex; flex-direction: column; 
     justify-content: space-between;
     
-    #header_user{
+    .header_user{
       h1{
         margin: 50px 0 20px;
         text-align: center;
@@ -73,6 +73,28 @@
               color: #000;
               font: bold 15px/24px 'noto sans kr';
             }
+          }
+          td{
+            display: block; 
+            >input[type=text]{
+              width: 100%; margin-right: 8px;
+              height: 40px;
+              padding: 10px 16px;
+              border-radius: 8px;
+              background: #f3f3f4; //rgb(232, 240, 254)
+              border: none;
+
+              &[type=text]:hover {
+                background: #fff;
+                border: 1px solid rgba(234,76,137,0.4);
+                box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
+              }
+            }
+            input:focus{
+              outline: none;
+              border: 1px solid rgba(234,76,137,0.4);
+              box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
+            }
             input[type=submit]{
               display: block; margin-top: 22px;
               width: 200px; height: 40px; 
@@ -83,29 +105,6 @@
             }
             &:last-child{ 
               display: flex; justify-content: center;
-            
-              &:hover {opacity: 0.7;}
-            }
-          }
-          td{
-            display: block; 
-            input[type=text]{
-              width: 100%; margin-right: 8px;
-              height: 40px;
-              padding: 10px 16px;
-              border-radius: 8px;
-              background: rgb(232, 240, 254);// rgba(70, 90, 126, 0.4));// #f3f3f4;
-              border: none;
-
-              &:hover {
-                border: 1px solid rgba(234,76,137,0.4);
-                box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
-              }
-            }
-            input:focus[type=text]{
-              outline: none;
-              border: 1px solid rgba(234,76,137,0.4);
-              box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
             }
           }
         }
@@ -149,7 +148,7 @@
       display: block; width: 100%; height: auto;
       background: #fff; //position: absolute; top: 0; left:0;
       
-      #header_user{
+      .header_user{
         width: 416px;
         margin: 0 auto;
         h1{
@@ -179,7 +178,7 @@
   .wrap_user{
 
     .side_user{ 
-      #header_user{
+      .header_user{
         width: 416px;
 
       }

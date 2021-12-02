@@ -14,18 +14,18 @@
 <body>
 
   <div class="wrap_user">
-    <section class="side_user">
-      <header id="header_user">
+    <section class="side_user side_join">
+      <header class="header_user header_join">
         <h1><a href="index.html">FlowerLab</a></h1>
         <p>Flower & Lorem ipsum dolor <br> sit amet consectetur adipisicing.</p>
       </header>
-      <div class="inner_user">
+      <div class="inner_use inner_join">
         <article></article>
       </div>
     </section>
 
     <section class="content_user content_join">
-      <nav class="goToJoin">
+      <nav class="goToLogin">
         <p>이미 회원이신가요? <a href="login.html">로그인하기</a></p>
       </nav>
       <main class="login_user">
@@ -35,6 +35,34 @@
           <form action="result.html" method="get" id=member>
             <fieldset>
               <legend class="hidden">회원가입 폼 입력</legend>
+              <table>
+                <caption class="hidden">회원가입 입력양식 테이블</caption>
+
+                <tbody class="table_join">
+                  <tr>
+                    <th scope="col"><label for="username">Username</label></th>
+                    <td><input type="text" name="username" id="username" class="input_join"></td>
+                  </tr>
+                  <tr>
+                    <th scope="col"><label for="email">Email</label></th>
+                    <td><input type="text" name="email" id="email" class="input_join"></td>
+                  </tr>
+                  <tr>
+                    <th scope="col"><label for="pwd">Password</label></th>
+                    <td><input type="password" name="pwd" id="pwd"  class="input_join" placeholder="6자리 이상 입력해주세요" ></td>
+                  </tr>
+                  <tr>
+                    <td scope="col" class="ch">
+                      <input type="checkbox" name="agree" id="agree">
+                      <label for="agree">flowerlab <a href="#">이용약관</a> 및  <a href="#">개인정보 취급방침</a>에 대한 내용을 모두 확인하였으며, 이에 동의합니다.</label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="submit" value="회원가입"></td>
+                  </tr>
+                </tbody>
+                
+              </table>
             </fieldset>
           </form>
 
@@ -58,34 +86,3 @@
 
 
 
-
-<!-- 
-          <form action="/" method="post">
-          <fieldset>
-            <legend class="hidden">회원가입양식폼</legend>
-            <table>
-              <caption class="hidden">회원정보 입력양식 테이블</caption>
-              <tr>
-                <th scope="col"><label for="id">Username</label></th>
-                <th><input type="text" name="id" id="id"></th>
-              </tr>
-              <tr>
-                <th><label for="email">Email</label></th>
-                <td><input type="text" name="email" id="email"></td>
-              </tr>
-              <tr>
-                <th><label for="pwd">Password</label></th>
-                <td><input type="text" name="pwd" id="pwd"></td>
-              </tr>
-            </table>
-            <div class="agreement">
-              <input type="checkbox" name="agree" id="agree">
-              <label for="agree">flowerlab <a href="#">이용약관</a> 및  <a href="#">개인정보 취급방침</a>에 대한 내용을 모두 확인하였으며, 이에 동의합니다.</label>
-            </div>
-            <div class="formBtn">
-              <input type="submit" value="SUBMIT">
-            </div>
-          </fieldset>
-
-        </form>
- -->
