@@ -1,17 +1,136 @@
-//클래스 명, 태그 명이 같기때문에 로그인에 사용한 scss그대로 적용. 
+//클래스 명, 태그 명이 같기때문에 로그인에 사용한 scss그대로 적용. 달라진 부분만 추가하면 된다.
 .wrap_user{
-  .side_user{
+  .side_join{
     background: $base;
 
-    .inner_user{
+    .inner_join{
       width: 100%;
     }
   }
 
   .content_join{
 
-    table{
-      //여기가 바뀐다.
+    nav.goToLogin{
+      display: flex; 
+      flex-grow: 0; padding: 30px 30px 0;
+      align-items: center; 
+      justify-content: flex-end;
+  
+        p{
+          font: 13px/1 'noto sans kr';
+          a{
+            margin-left: 10px;
+            color:rgb(27, 27, 212)
+          }
+        }
+      }
+
+
+    .table_join{
+      width: 100%;
+      
+      td{
+        display: block; 
+        input[type=password]{
+          width: 100%; margin-right: 8px;
+          height: 40px;
+          padding: 10px 16px;
+          border-radius: 8px;
+          background: #f3f3f4; //rgb(232, 240, 254)
+          border: none;
+
+          &[type=password]:hover {
+            background: #fff;
+            border: 1px solid rgba(234,76,137,0.4);
+            box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
+          }
+        }
+
+        &.ch{ 
+          margin: 20px 0;
+          input[type=checkbox]{
+            margin-right: 5px;
+          }
+          label{
+            font: normal 14px/1.2 'noto sans kr';
+            color: #555;
+  
+            a{
+              color:rgb(27, 27, 212)
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet){
+  .wrap_user{
+    .side_join{ width: 450px; }
+  }
+}
+
+@media screen and (max-width: 960px){
+  .wrap_user{
+    display: block;
+    .side_join{ 
+      display: block; width: 100%; height: auto;
+      background: #fff; //position: absolute; top: 0; left:0;
+      
+      .header_join{
+        width: 416px;
+        margin: 0 auto;
+        h1{
+          margin: auto;
+          padding:48px 20px 0;
+          text-align: left;
+          font: bold 24px/1 'lora';
+          a{ color: $txt;}
+        }
+        p{ display: none; }
+      }
+      .inner_join{display: none; }
+    }
+
+    .content_join{
+      display: block; 
+
+      nav.goToLogin{
+        position: absolute; bottom: 90px; left: 50%; transform:translateX(-50%);
+        display: block; text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $mobile){
+  .wrap_user{
+
+    .side_join{ 
+      .header_join{
+        width: 416px;
+
+      }
+    }
+
+    .content_join{
+      display: block; width: 100%;
+
+      nav.goToLogin{
+        p{
+          font-size: 12px; line-height: 18px;
+          a{  display: block;}
+        }
+      }
+
+      main.login_user{
+        .inner_user{
+          .sns_user{
+            padding: 0px;
+          }
+        }
+      }
     }
   }
 }

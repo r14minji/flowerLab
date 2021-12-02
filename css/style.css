@@ -768,13 +768,13 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
-    .wrap_user .side_user #header_user h1 {
+    .wrap_user .side_user .header_user h1 {
       margin: 50px 0 20px;
       text-align: center;
       font: bold 36px/1 'lora'; }
-      .wrap_user .side_user #header_user h1 a {
+      .wrap_user .side_user .header_user h1 a {
         color: #262223; }
-    .wrap_user .side_user #header_user p {
+    .wrap_user .side_user .header_user p {
       font: normal 16px/1 'lora';
       text-align: center;
       margin-bottom: 20px; }
@@ -822,7 +822,25 @@ aside {
               margin: 14px 0 4px;
               color: #000;
               font: bold 15px/24px 'noto sans kr'; }
-            .wrap_user .content_user main.login_user .inner_user table th input[type=submit] {
+          .wrap_user .content_user main.login_user .inner_user table td {
+            display: block; }
+            .wrap_user .content_user main.login_user .inner_user table td > input[type=text] {
+              width: 100%;
+              margin-right: 8px;
+              height: 40px;
+              padding: 10px 16px;
+              border-radius: 8px;
+              background: #f3f3f4;
+              border: none; }
+              .wrap_user .content_user main.login_user .inner_user table td > input[type=text][type=text]:hover {
+                background: #fff;
+                border: 1px solid rgba(234, 76, 137, 0.4);
+                box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
+            .wrap_user .content_user main.login_user .inner_user table td input:focus {
+              outline: none;
+              border: 1px solid rgba(234, 76, 137, 0.4);
+              box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
+            .wrap_user .content_user main.login_user .inner_user table td input[type=submit] {
               display: block;
               margin-top: 22px;
               width: 200px;
@@ -834,28 +852,9 @@ aside {
               text-align: center;
               color: #fff;
               font: bold 14px/20px 'noto sans kr'; }
-            .wrap_user .content_user main.login_user .inner_user table th:last-child {
+            .wrap_user .content_user main.login_user .inner_user table td:last-child {
               display: flex;
               justify-content: center; }
-              .wrap_user .content_user main.login_user .inner_user table th:last-child:hover {
-                opacity: 0.7; }
-          .wrap_user .content_user main.login_user .inner_user table td {
-            display: block; }
-            .wrap_user .content_user main.login_user .inner_user table td input[type=text] {
-              width: 100%;
-              margin-right: 8px;
-              height: 40px;
-              padding: 10px 16px;
-              border-radius: 8px;
-              background: #e8f0fe;
-              border: none; }
-              .wrap_user .content_user main.login_user .inner_user table td input[type=text]:hover {
-                border: 1px solid rgba(234, 76, 137, 0.4);
-                box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
-            .wrap_user .content_user main.login_user .inner_user table td input:focus[type=text] {
-              outline: none;
-              border: 1px solid rgba(234, 76, 137, 0.4);
-              box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
         .wrap_user .content_user main.login_user .inner_user .sns_user {
           margin-top: 40px;
           padding: 20px; }
@@ -891,17 +890,17 @@ aside {
       width: 100%;
       height: auto;
       background: #fff; }
-      .wrap_user .side_user #header_user {
+      .wrap_user .side_user .header_user {
         width: 416px;
         margin: 0 auto; }
-        .wrap_user .side_user #header_user h1 {
+        .wrap_user .side_user .header_user h1 {
           margin: auto;
           padding: 48px 20px 0;
           text-align: left;
           font: bold 24px/1 'lora'; }
-          .wrap_user .side_user #header_user h1 a {
+          .wrap_user .side_user .header_user h1 a {
             color: #262223; }
-        .wrap_user .side_user #header_user p {
+        .wrap_user .side_user .header_user p {
           display: none; }
       .wrap_user .side_user .inner_user {
         display: none; }
@@ -915,7 +914,7 @@ aside {
         display: block;
         text-align: center; } }
 @media screen and (max-width: 539px) {
-  .wrap_user .side_user #header_user {
+  .wrap_user .side_user .header_user {
     width: 416px; }
   .wrap_user .content_user {
     display: block;
@@ -927,11 +926,94 @@ aside {
         display: block; }
     .wrap_user .content_user main.login_user .inner_user .sns_user {
       padding: 0px; } }
-.wrap_user .side_user {
+.wrap_user .side_join {
   background: #F2EDD7; }
-  .wrap_user .side_user .inner_user {
+  .wrap_user .side_join .inner_join {
     width: 100%; }
+.wrap_user .content_join nav.goToLogin {
+  display: flex;
+  flex-grow: 0;
+  padding: 30px 30px 0;
+  align-items: center;
+  justify-content: flex-end; }
+  .wrap_user .content_join nav.goToLogin p {
+    font: 13px/1 'noto sans kr'; }
+    .wrap_user .content_join nav.goToLogin p a {
+      margin-left: 10px;
+      color: #1b1bd4; }
+.wrap_user .content_join .table_join {
+  width: 100%; }
+  .wrap_user .content_join .table_join td {
+    display: block; }
+    .wrap_user .content_join .table_join td input[type=password] {
+      width: 100%;
+      margin-right: 8px;
+      height: 40px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: #f3f3f4;
+      border: none; }
+      .wrap_user .content_join .table_join td input[type=password][type=password]:hover {
+        background: #fff;
+        border: 1px solid rgba(234, 76, 137, 0.4);
+        box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
+    .wrap_user .content_join .table_join td.ch {
+      margin: 20px 0; }
+      .wrap_user .content_join .table_join td.ch input[type=checkbox] {
+        margin-right: 5px; }
+      .wrap_user .content_join .table_join td.ch label {
+        font: normal 14px/1.2 'noto sans kr';
+        color: #555; }
+        .wrap_user .content_join .table_join td.ch label a {
+          color: #1b1bd4; }
 
+@media screen and (max-width: 1179px) {
+  .wrap_user .side_join {
+    width: 450px; } }
+@media screen and (max-width: 960px) {
+  .wrap_user {
+    display: block; }
+    .wrap_user .side_join {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff; }
+      .wrap_user .side_join .header_join {
+        width: 416px;
+        margin: 0 auto; }
+        .wrap_user .side_join .header_join h1 {
+          margin: auto;
+          padding: 48px 20px 0;
+          text-align: left;
+          font: bold 24px/1 'lora'; }
+          .wrap_user .side_join .header_join h1 a {
+            color: #262223; }
+        .wrap_user .side_join .header_join p {
+          display: none; }
+      .wrap_user .side_join .inner_join {
+        display: none; }
+    .wrap_user .content_join {
+      display: block; }
+      .wrap_user .content_join nav.goToLogin {
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        text-align: center; } }
+@media screen and (max-width: 539px) {
+  .wrap_user .side_join .header_join {
+    width: 416px; }
+  .wrap_user .content_join {
+    display: block;
+    width: 100%; }
+    .wrap_user .content_join nav.goToLogin p {
+      font-size: 12px;
+      line-height: 18px; }
+      .wrap_user .content_join nav.goToLogin p a {
+        display: block; }
+    .wrap_user .content_join main.login_user .inner_user .sns_user {
+      padding: 0px; } }
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
