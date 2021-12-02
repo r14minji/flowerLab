@@ -1014,6 +1014,92 @@ aside {
         display: block; }
     .wrap_user .content_join main.login_user .inner_user .sns_user {
       padding: 0px; } }
+.contact .sub_visual p {
+  font-family: 'Noto Sans KR'; }
+
+.wrap_form #contact {
+  width: 100%; }
+  .wrap_form #contact tr {
+    display: block;
+    margin-bottom: 30px; }
+    .wrap_form #contact tr th {
+      display: block;
+      text-align: left;
+      font: bold 40px/70px 'noto sans kr';
+      margin-bottom: 30px; }
+    .wrap_form #contact tr td input:focus {
+      outline: none; }
+    .wrap_form #contact tr:nth-of-type(1) td {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      vertical-align: middle; }
+      .wrap_form #contact tr:nth-of-type(1) td label {
+        font: bold 20px/50px 'noto sans kr';
+        margin-right: 50px;
+        color: #000; }
+        .wrap_form #contact tr:nth-of-type(1) td label span {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 2px solid #ddd;
+          cursor: pointer; }
+      .wrap_form #contact tr:nth-of-type(1) td input[type=radio] {
+        display: none; }
+      .wrap_form #contact tr:nth-of-type(1) td input[type=radio]:checked + label span {
+        background: #aaa; }
+    .wrap_form #contact tr:nth-of-type(2) td {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap; }
+      .wrap_form #contact tr:nth-of-type(2) td .info {
+        width: 42%;
+        margin: 40px 20px; }
+        .wrap_form #contact tr:nth-of-type(2) td .info:nth-of-type(odd) {
+          margin-left: 0px; }
+      .wrap_form #contact tr:nth-of-type(2) td label {
+        display: inline-block;
+        font: bold 20px/1 'noto sans kr';
+        color: #ddd; }
+      .wrap_form #contact tr:nth-of-type(2) td input[type=text] {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #bbb;
+        padding: 16px 5px; }
+        .wrap_form #contact tr:nth-of-type(2) td input[type=text]::after {
+          content: "";
+          display: block;
+          width: 20%;
+          height: 1px;
+          background: #555;
+          transition: 500ms; }
+          .wrap_form #contact tr:nth-of-type(2) td input[type=text]::after.on {
+            width: 100%;
+            height: 1px;
+            background: #555; }
+    .wrap_form #contact tr:nth-of-type(3) td {
+      display: block; }
+      .wrap_form #contact tr:nth-of-type(3) td textarea {
+        width: 100%;
+        height: 300px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        resize: none; }
+.wrap_form .terms {
+  margin: 80px 0 20px; }
+  .wrap_form .terms h2 {
+    font: bold 24px/30px 'noto sans kr';
+    margin-bottom: 20px; }
+  .wrap_form .terms ul li {
+    list-style: auto;
+    list-style-type: disc;
+    margin-left: 20px;
+    font: normal 18px/1.2 'noto sans kr'; }
+.wrap_form .agreement {
+  border: 1px solid #000; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
