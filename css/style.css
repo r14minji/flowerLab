@@ -813,7 +813,51 @@ aside {
           color: #000;
           text-align: center;
           margin-bottom: 30px; }
+        .wrap_user .content_user main.login_user .inner_user table {
+          width: 100%; }
+          .wrap_user .content_user main.login_user .inner_user table th {
+            display: block;
+            text-align: left; }
+            .wrap_user .content_user main.login_user .inner_user table th label {
+              margin: 14px 0 4px;
+              color: #000;
+              font: bold 15px/24px 'noto sans kr'; }
+            .wrap_user .content_user main.login_user .inner_user table th input[type=submit] {
+              display: block;
+              margin-top: 22px;
+              width: 200px;
+              height: 40px;
+              padding: 10px 16px;
+              background: #999e85;
+              border: none;
+              border-radius: 8px;
+              text-align: center;
+              color: #fff;
+              font: bold 14px/20px 'noto sans kr'; }
+            .wrap_user .content_user main.login_user .inner_user table th:last-child {
+              display: flex;
+              justify-content: center; }
+              .wrap_user .content_user main.login_user .inner_user table th:last-child:hover {
+                opacity: 0.7; }
+          .wrap_user .content_user main.login_user .inner_user table td {
+            display: block; }
+            .wrap_user .content_user main.login_user .inner_user table td input[type=text] {
+              width: 100%;
+              margin-right: 8px;
+              height: 40px;
+              padding: 10px 16px;
+              border-radius: 8px;
+              background: #e8f0fe;
+              border: none; }
+              .wrap_user .content_user main.login_user .inner_user table td input[type=text]:hover {
+                border: 1px solid rgba(234, 76, 137, 0.4);
+                box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
+            .wrap_user .content_user main.login_user .inner_user table td input:focus[type=text] {
+              outline: none;
+              border: 1px solid rgba(234, 76, 137, 0.4);
+              box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1); }
         .wrap_user .content_user main.login_user .inner_user .sns_user {
+          margin-top: 40px;
           padding: 20px; }
           .wrap_user .content_user main.login_user .inner_user .sns_user p {
             font: bold 14px/1 'noto sans kr';
@@ -823,16 +867,18 @@ aside {
           .wrap_user .content_user main.login_user .inner_user .sns_user ul {
             display: flex;
             justify-content: space-around;
-            align-items: center;
-            padding: 0 150px; }
+            align-items: center; }
             .wrap_user .content_user main.login_user .inner_user .sns_user ul li {
               width: 50px;
               height: 50px;
               border-radius: 50%;
               text-align: center;
               font: 20px/50px 'noto sans';
-              background: #eee;
-              color: #fff; }
+              background: #ddd;
+              color: #fff;
+              opacity: 0.7; }
+              .wrap_user .content_user main.login_user .inner_user .sns_user ul li:hover {
+                opacity: 1; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {

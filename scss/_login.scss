@@ -62,7 +62,57 @@
           text-align: center;
           margin-bottom: 30px;
         }
+
+        table{
+          width: 100%;
+
+          th{
+            display: block; text-align: left;
+            label{
+              margin: 14px 0 4px;
+              color: #000;
+              font: bold 15px/24px 'noto sans kr';
+            }
+            input[type=submit]{
+              display: block; margin-top: 22px;
+              width: 200px; height: 40px; 
+              padding: 10px 16px;
+              background: $core;
+              border: none; border-radius: 8px; text-align: center; color: #fff;
+              font: bold 14px/20px 'noto sans kr';
+            }
+            &:last-child{ 
+              display: flex; justify-content: center;
+            
+              &:hover {opacity: 0.7;}
+            }
+          }
+          td{
+            display: block; 
+            input[type=text]{
+              width: 100%; margin-right: 8px;
+              height: 40px;
+              padding: 10px 16px;
+              border-radius: 8px;
+              background: rgb(232, 240, 254);// rgba(70, 90, 126, 0.4));// #f3f3f4;
+              border: none;
+
+              &:hover {
+                border: 1px solid rgba(234,76,137,0.4);
+                box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
+              }
+            }
+            input:focus[type=text]{
+              outline: none;
+              border: 1px solid rgba(234,76,137,0.4);
+              box-shadow: 0 0 0 4px rgba(234, 76, 137, 0.1);
+            }
+          }
+        }
+
+
         .sns_user{
+          margin-top: 40px;
           padding: 20px;
           p{
             font: bold 14px/1 'noto sans kr';
@@ -71,12 +121,13 @@
           }
           ul{
             display: flex; justify-content: space-around; align-items: center;
-            padding: 0 150px;
             li{
               width: 50px;height: 50px;
               border-radius: 50%; text-align: center;
               font: 20px/50px 'noto sans';
-              background: #eee; color: #fff;
+              background: #ddd; color: #fff;
+              opacity: 0.7;
+              &:hover {opacity: 1;}
             }
           }
         }
