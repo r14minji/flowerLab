@@ -756,80 +756,83 @@ aside {
         border-bottom: 1px solid #000;
         opacity: 1; }
 
-.container {
+.wrap_user {
   display: flex;
   flex-direction: row;
   height: 100vh;
   overflow: hidden; }
-  .container section {
+  .wrap_user .side_user {
     width: 514px;
     height: 100vh;
     background: #FFB799;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
-    .container section #header_user h1 {
+    .wrap_user .side_user #header_user h1 {
       margin: 50px 0 20px;
       text-align: center;
       font: bold 36px/1 'lora'; }
-      .container section #header_user h1 a {
+      .wrap_user .side_user #header_user h1 a {
         color: #262223; }
-    .container section #header_user p {
+    .wrap_user .side_user #header_user p {
       font: normal 16px/1 'lora';
       text-align: center;
       margin-bottom: 20px; }
-    .container section .inner {
-      border: 1px solid green; }
-  .container main {
+    .wrap_user .side_user .inner_user {
+      width: 100%; }
+  .wrap_user .content_user {
     display: flex;
     flex-direction: column;
     flex: 1;
-    overflow: auto; }
-    .container main nav {
+    overflow: auto;
+    padding: 0; }
+    .wrap_user .content_user nav.goToJoin {
       display: flex;
       flex-grow: 0;
-      align-items: center;
-      justify-content: flex-end;
       padding: 30px 30px 0;
-      background: lightgreen; }
-      .container main nav p {
+      align-items: center;
+      justify-content: flex-end; }
+      .wrap_user .content_user nav.goToJoin p {
         font: 13px/1 'noto sans kr'; }
-        .container main nav p a {
+        .wrap_user .content_user nav.goToJoin p a {
           margin-left: 10px;
           color: #1b1bd4; }
-    .container main .inner {
+    .wrap_user .content_user main.login_user {
       display: flex;
       flex-grow: 1;
       align-items: center;
       justify-content: center;
-      background: #eee; }
-      .container main .inner h2 {
-        font: bold 24px/1 'noto sans kr';
-        color: #000;
-        text-align: center;
-        margin-bottom: 30px; }
-      .container main .inner .sns {
-        margin-top: 40px;
-        padding: 20px;
-        margin: 0 auto; }
-        .container main .inner .sns p {
-          font: bold 14px/1 'noto sans kr';
+      margin: 0;
+      padding: 0; }
+      .wrap_user .content_user main.login_user .inner_user {
+        padding: 30px 60px 0;
+        width: 100%;
+        max-width: 416px; }
+        .wrap_user .content_user main.login_user .inner_user h2 {
+          font: bold 24px/1 'noto sans kr';
+          color: #000;
           text-align: center;
-          color: #555;
-          margin-bottom: 20px; }
-        .container main .inner .sns ul {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          padding: 0 150px; }
-          .container main .inner .sns ul li {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+          margin-bottom: 30px; }
+        .wrap_user .content_user main.login_user .inner_user .sns_user {
+          padding: 20px; }
+          .wrap_user .content_user main.login_user .inner_user .sns_user p {
+            font: bold 14px/1 'noto sans kr';
             text-align: center;
-            font: 20px/50px 'noto sans';
-            background: #eee;
-            color: #fff; }
+            color: #555;
+            margin-bottom: 20px; }
+          .wrap_user .content_user main.login_user .inner_user .sns_user ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 150px; }
+            .wrap_user .content_user main.login_user .inner_user .sns_user ul li {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              text-align: center;
+              font: 20px/50px 'noto sans';
+              background: #eee;
+              color: #fff; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {

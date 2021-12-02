@@ -1,14 +1,15 @@
-.container{
-  display: flex;
-  flex-direction: row;
+// sass가 연결되어있으니 같은 태그나 클래스명을 사용할 경우 마진이나 패딩값이 적용될 수 있다.
+.wrap_user{
+  display: flex;   flex-direction: row;
   height: 100vh;
   overflow: hidden;
 
-
-  section{
+  .side_user{
     width: 514px; height: 100vh;
     background: $hover;
-    display: flex; flex-direction: column; justify-content: space-between;
+    display: flex; flex-direction: column; 
+    justify-content: space-between;
+    
     #header_user{
       h1{
         margin: 50px 0 20px;
@@ -22,19 +23,21 @@
         margin-bottom: 20px;
       }
     }
-    .inner{
-      border: 1px solid green;
+    .inner_user{
+      width: 100%;
     }
   }
 
-  main{
+  .content_user{
     display:flex; flex-direction: column;
-    flex:1; overflow: auto;
+    flex:1; overflow: auto; padding: 0;
   
-    nav{
-    display: flex; flex-grow: 0; align-items: center; justify-content: flex-end;
-    padding: 30px 30px 0;
-    background: lightgreen;
+    nav.goToJoin{
+    display: flex; 
+    flex-grow: 0; padding: 30px 30px 0;
+    align-items: center; 
+    justify-content: flex-end;
+
       p{
         font: 13px/1 'noto sans kr';
         a{
@@ -43,38 +46,43 @@
         }
       }
     }
-    .inner{
 
-      display: flex; flex-grow: 1; align-items: center; justify-content: center; 
-      background: #eee;
-  
-      h2{
-        font: bold 24px/1 'noto sans kr'; color: #000;
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-  
-      .sns{
-        margin-top: 40px; padding: 20px;
-        margin: 0 auto;
-        p{
-          font: bold 14px/1 'noto sans kr';
-          text-align: center; color: #555;
-          margin-bottom: 20px;
+    main.login_user{
+      display: flex; 
+      flex-grow: 1; 
+      align-items: center; justify-content: center; 
+      margin: 0; padding: 0;
+      
+      .inner_user{
+        padding: 30px 60px 0;
+        width: 100%; max-width: 416px;
+    
+        h2{
+          font: bold 24px/1 'noto sans kr'; color: #000;
+          text-align: center;
+          margin-bottom: 30px;
         }
-        ul{
-          display: flex; justify-content: space-around; align-items: center;
-          padding: 0 150px;
-          li{
-            width: 50px;height: 50px;
-            border-radius: 50%; text-align: center;
-            font: 20px/50px 'noto sans';
-            background: #eee; color: #fff;
+        .sns_user{
+          padding: 20px;
+          p{
+            font: bold 14px/1 'noto sans kr';
+            text-align: center; color: #555;
+            margin-bottom: 20px;
+          }
+          ul{
+            display: flex; justify-content: space-around; align-items: center;
+            padding: 0 150px;
+            li{
+              width: 50px;height: 50px;
+              border-radius: 50%; text-align: center;
+              font: 20px/50px 'noto sans';
+              background: #eee; color: #fff;
+            }
           }
         }
       }
     }
+
   }
 }
 

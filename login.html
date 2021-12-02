@@ -13,68 +13,64 @@
 
 <body>
 
-  <div class="container">
-    <section>
+  <div class="wrap_user">
+    <section class="side_user">
       <header id="header_user">
         <h1><a href="index.html">FlowerLab</a></h1>
         <p>Flower & Lorem ipsum dolor <br> sit amet consectetur adipisicing.</p>
       </header>
-      <div class="inner"></div>
+      <div class="inner_user">
+        <article></article>
+      </div>
     </section>
 
-    <main>
-      <nav>
+    <section class="content_user">
+      <nav class="goToJoin">
         <p>회원이 아니신가요? <a href="join.html">회원가입하기</a></p>
       </nav>
-      <div class="inner">
-        <h2>로그인하기</h2>
-        
-        <form action="/" method="post">
-          <fieldset>
-            <legend class="hidden">회원가입양식폼</legend>
-            <table>
-              <caption class="hidden">회원정보 입력양식 테이블</caption>
-              <tr>
-                <th scope="col"><label for="id">Username</label></th>
-                <td><input type="text" name="id" id="id"></td>
-              </tr>
-              <tr>
-                <th><label for="email">Email</label></th>
-                <td><input type="text" name="email" id="email"></td>
-              </tr>
-              <tr>
-                <th><label for="pwd">Password</label></th>
-                <td><input type="text" name="pwd" id="pwd"></td>
-              </tr>
-              <tr>
-                <th>
-                  <input type="submit" value="SUBMIT">
-                </th>
-              </tr>
-            </table>
-          </fieldset>
-        </form>
-        
-        <div class="sns">
-          <p>소셜계정으로 간편하게 로그인 하세요.</p>
-          <ul>
-            <li><i class="fab fa-facebook"></i></li>
-            <li><i class="fab fa-twitter"></i></li>
-            <li><i class="fab fa-google"></i></li>
-            <li><i class="fab fa-kaggle"></i></li>
-          </ul>
+      <main class="login_user">
+        <div class="inner_user">
+          <h2>로그인하기</h2>
+          
+          <form action="/" method="post">
+            <fieldset>
+              <legend class="hidden">회원가입양식폼</legend>
+              <table>
+                <caption class="hidden">회원정보 입력양식 테이블</caption>
+                <tr>
+                  <th scope="col"><label for="id">Username</label></th>
+                  <td><input type="text" name="id" id="id"></td>
+                </tr>
+                <tr>
+                  <th><label for="email">Email</label></th>
+                  <td><input type="text" name="email" id="email"></td>
+                </tr>
+                <tr>
+                  <th><label for="pwd">Password</label></th>
+                  <td><input type="text" name="pwd" id="pwd"></td>
+                </tr>
+                <tr>
+                  <th>
+                    <input type="submit" value="SUBMIT">
+                  </th>
+                </tr>
+              </table>
+            </fieldset>
+          </form>
+          
+          <div class="sns_user">
+            <p>소셜계정으로 간편하게 로그인 하세요.</p>
+            <ul>
+              <li><i class="fab fa-facebook"></i></li>
+              <li><i class="fab fa-twitter"></i></li>
+              <li><i class="fab fa-google"></i></li>
+              <li><i class="fab fa-kaggle"></i></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+
+    </section>
   </div>
-
-
-
-
-
-
-  
-
-
 </body>
 </html>
