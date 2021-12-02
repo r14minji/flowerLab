@@ -17,9 +17,9 @@ btnCall.addEventListener("click", e=>{
 
 // user 클릭이벤트
 user.addEventListener("click", e =>{
-  e.preventDefault();
+  //e.preventDefault(); 막아두면 페이지 이동 못함
   const sub = e.currentTarget.querySelector(".sub");
-  sub.style.display = "block";
+  sub.style.display = "block"; 
 })
 
 // wep - header - util -2depth
@@ -31,7 +31,7 @@ util_lis.forEach(el =>{
   el.addEventListener("focusin", e => {
     const sub = e.currentTarget.querySelector(".sub");
     if(sub != null){
-      sub.style.display = "block";
+      sub.style.display = "block"; 
     }
   })
 })
@@ -40,7 +40,6 @@ util_lis.forEach(el =>{
 util_lis.forEach(el => {
   el.addEventListener("mouseleave", e=> {
     const sub = e.currentTarget.querySelector(".sub");
-    e.currentTarget.classList.remove("on");
     if(sub != null){sub.style.display = "none";}
   })
   

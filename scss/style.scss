@@ -127,9 +127,8 @@ $menu: #006B6C;
             padding: 10px;
             font: 14px/1 'lora';
             color: $txt;
-            //&:hover{background: $hover; color: $base;}
-          } 
-          &.on a{background: $hover; color: $base;}
+            } 
+
           .sub{
             display: none;
             width: 100px;
@@ -146,7 +145,6 @@ $menu: #006B6C;
               &:hover a{opacity: 1; color: $txt;}
             }
           }
-          &.on .sub{display: block;}
           //&:hover .sub{display: block;}
         }
       }

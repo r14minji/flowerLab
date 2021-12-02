@@ -893,9 +893,6 @@ main {
           padding: 10px;
           font: 14px/1 'lora';
           color: #262223; }
-        #header .inner .menuWeb .util > li.on a {
-          background: #FFB799;
-          color: #F2EDD7; }
         #header .inner .menuWeb .util > li .sub {
           display: none;
           width: 100px;
@@ -915,8 +912,6 @@ main {
             #header .inner .menuWeb .util > li .sub ul li:hover a {
               opacity: 1;
               color: #262223; }
-        #header .inner .menuWeb .util > li.on .sub {
-          display: block; }
     #header .inner .btnCall {
       display: none;
       width: 20px;
