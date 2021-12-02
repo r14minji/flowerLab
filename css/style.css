@@ -880,6 +880,53 @@ aside {
               .wrap_user .content_user main.login_user .inner_user .sns_user ul li:hover {
                 opacity: 1; }
 
+@media screen and (max-width: 1179px) {
+  .wrap_user .side_user {
+    width: 450px; } }
+@media screen and (max-width: 960px) {
+  .wrap_user {
+    display: block; }
+    .wrap_user .side_user {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff; }
+      .wrap_user .side_user #header_user {
+        width: 416px;
+        margin: 0 auto; }
+        .wrap_user .side_user #header_user h1 {
+          margin: auto;
+          padding: 48px 20px 0;
+          text-align: left;
+          font: bold 24px/1 'lora'; }
+          .wrap_user .side_user #header_user h1 a {
+            color: #262223; }
+        .wrap_user .side_user #header_user p {
+          display: none; }
+      .wrap_user .side_user .inner_user {
+        display: none; }
+    .wrap_user .content_user {
+      display: block; }
+      .wrap_user .content_user nav.goToJoin {
+        position: absolute;
+        bottom: 135px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        text-align: center; } }
+@media screen and (max-width: 539px) {
+  .wrap_user .side_user #header_user {
+    width: 416px; }
+  .wrap_user .content_user {
+    display: block;
+    width: 100%; }
+    .wrap_user .content_user nav.goToJoin p {
+      font-size: 12px;
+      line-height: 18px; }
+      .wrap_user .content_user nav.goToJoin p a {
+        display: block; }
+    .wrap_user .content_user main.login_user .inner_user .sns_user {
+      padding: 0px; } }
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
