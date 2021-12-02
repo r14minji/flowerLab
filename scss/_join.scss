@@ -1,1 +1,17 @@
 //클래스 명, 태그 명이 같기때문에 로그인에 사용한 scss그대로 적용. 
+.wrap_user{
+  .side_user{
+    background: $base;
+
+    .inner_user{
+      width: 100%;
+    }
+  }
+
+  .content_join{
+
+    table{
+      //여기가 바뀐다.
+    }
+  }
+}

@@ -927,6 +927,11 @@ aside {
         display: block; }
     .wrap_user .content_user main.login_user .inner_user .sns_user {
       padding: 0px; } }
+.wrap_user .side_user {
+  background: #F2EDD7; }
+  .wrap_user .side_user .inner_user {
+    width: 100%; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
