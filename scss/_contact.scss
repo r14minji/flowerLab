@@ -14,7 +14,7 @@
     width: 100%; 
     
     tr{
-      display: block; margin-bottom: 30px;
+      display: block; margin-bottom: 60px;
       th{
         display: block;
         text-align: left;
@@ -29,7 +29,7 @@
       &:nth-of-type(1){
         td{
           display: flex; justify-content: start; align-items: center;
-          vertical-align: middle; 
+          vertical-align: middle; margin: 40px 0px;
 
           label{
             font: bold 20px/50px 'noto sans kr';
@@ -92,22 +92,26 @@
   }
   
   .terms{
-    margin: 80px 0 20px;
+    margin-bottom: 20px; 
     h2{
-      font: bold 24px/30px 'noto sans kr';
+      font: bold 22px/30px 'noto sans kr';
       margin-bottom: 20px;
     }
     ul li{
       list-style: auto; list-style-type: disc;
       margin-left: 20px;
-      font: normal 18px/1.2 'noto sans kr';
+      font: normal 16px/1.2 'noto sans kr';
     }
   }
   
   .agreement{
-    border: 1px solid #000;
+    font: normal 18px/1 'noto sans kr';
+    margin-bottom: 60px;
   }
   input[type=submit]{
-  
+    display: block; width: 20%; padding: 20px 0px;
+    text-align: center; background: #333; color: #fff;
+    margin: 0 auto;
+    font: bold 20px/1 'noto sans kr';
   }
 }

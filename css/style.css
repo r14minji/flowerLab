@@ -1021,7 +1021,7 @@ aside {
   width: 100%; }
   .wrap_form #contact tr {
     display: block;
-    margin-bottom: 30px; }
+    margin-bottom: 60px; }
     .wrap_form #contact tr th {
       display: block;
       text-align: left;
@@ -1033,7 +1033,8 @@ aside {
       display: flex;
       justify-content: start;
       align-items: center;
-      vertical-align: middle; }
+      vertical-align: middle;
+      margin: 40px 0px; }
       .wrap_form #contact tr:nth-of-type(1) td label {
         font: bold 20px/50px 'noto sans kr';
         margin-right: 50px;
@@ -1088,17 +1089,27 @@ aside {
         border: 1px solid #ddd;
         resize: none; }
 .wrap_form .terms {
-  margin: 80px 0 20px; }
+  margin-bottom: 20px; }
   .wrap_form .terms h2 {
-    font: bold 24px/30px 'noto sans kr';
+    font: bold 22px/30px 'noto sans kr';
     margin-bottom: 20px; }
   .wrap_form .terms ul li {
     list-style: auto;
     list-style-type: disc;
     margin-left: 20px;
-    font: normal 18px/1.2 'noto sans kr'; }
+    font: normal 16px/1.2 'noto sans kr'; }
 .wrap_form .agreement {
-  border: 1px solid #000; }
+  font: normal 18px/1 'noto sans kr';
+  margin-bottom: 60px; }
+.wrap_form input[type=submit] {
+  display: block;
+  width: 20%;
+  padding: 20px 0px;
+  text-align: center;
+  background: #333;
+  color: #fff;
+  margin: 0 auto;
+  font: bold 20px/1 'noto sans kr'; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {
