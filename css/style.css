@@ -1201,6 +1201,21 @@ aside {
 .gallery .sub_visual p {
   font-family: 'Noto Sans KR'; }
 
+.gallery #photoList .item {
+  width: 230px;
+  filter: grayscale(100%);
+  position: relative; }
+  .gallery #photoList .item div {
+    margin: 5px;
+    box-shadow: 0, 0, 20px, rgba(0, 0, 0, 0.4); }
+    .gallery #photoList .item div img {
+      width: 100%; }
+  .gallery #photoList .item:hover {
+    transform: scale(1.1);
+    position: relative;
+    z-index: 2;
+    filter: grayscale(0%); }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
