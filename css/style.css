@@ -1014,6 +1014,8 @@ aside {
         display: block; }
     .wrap_user .content_join main.login_user .inner_user .sns_user {
       padding: 0px; } }
+.contact .sub_visual .subPic {
+  background: url(../img/sub4.jpg) no-repeat center/cover; }
 .contact .sub_visual p {
   font-family: 'Noto Sans KR'; }
 
