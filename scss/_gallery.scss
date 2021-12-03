@@ -10,9 +10,26 @@
 }
 
 .gallery{
+  #searchBox{
+    width: 100%;
+    display: flex; justify-content: flex-end; align-items: center;
+
+    input[type=text]{
+      width: 400px; height: 40px; padding: 14px 5px;
+    }
+    .btnSearh{
+      border: none;
+      width: 100px; height: 40px; font: bold 20px/40px 'noto sans';
+      background: #333; color: #fff;
+    }
+  }
+
 
   #photoList{
-    
+    img{
+      position: fixed; top: 0; left: 0;
+
+    }
     .item{
       width: 230px; 
       filter: grayscale(100%); 
