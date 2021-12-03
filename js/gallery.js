@@ -54,7 +54,7 @@ function createList(items){
 }
 
 function delayLoading(){
-  const imgs = document.querySelectorAll("img");
+  const imgs = list.querySelectorAll("img");
   let count = 0;
   for(let el of imgs){
     el.onload = () =>{ 
@@ -66,7 +66,7 @@ function delayLoading(){
 }
 
 function isoLayout(){
-  //loading.classList.add("off");
+  loading.classList.add("off");
 
   new Isotope("#photoList", {
     itemSelector: ".item",

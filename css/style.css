@@ -1201,58 +1201,59 @@ aside {
 .gallery .sub_visual p {
   font-family: 'Noto Sans KR'; }
 
-.gallery #searchBox {
+.gallery #gallery #searchBox {
   width: 100%;
   margin: 40px 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center; }
-  .gallery #searchBox input[type=text] {
+  .gallery #gallery #searchBox input[type=text] {
     width: 400px;
     height: 40px;
     padding: 14px 10px;
     margin: 10px;
     border-radius: 5px;
     border: 1px solid #ccc; }
-  .gallery #searchBox .btnSearch {
+  .gallery #gallery #searchBox .btnSearch {
     border: none;
     width: 100px;
     height: 40px;
     font: bold 15px/40px 'noto sans';
     background: #333;
     color: #fff;
-    border-radius: 5px; }
-.gallery #wrap_list .loading {
-  width: 100%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 1s; }
-  .gallery #wrap_list .loading.off {
-    opacity: 0; }
-.gallery #wrap_list #photoList {
+    border-radius: 5px;
+    cursor: pointer; }
+.gallery #gallery #wrap {
   width: 100%; }
-  .gallery #wrap_list #photoList .item {
-    width: calc(100% / 5);
-    margin: 0 auto;
-    padding: 10px; }
-    .gallery #wrap_list #photoList .item div {
-      width: 100%;
-      padding: 20px 10px 50px;
-      border-radius: 8px;
-      background: #eee;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
-      .gallery #wrap_list #photoList .item div a > img {
+  .gallery #gallery #wrap .loading {
+    width: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s; }
+    .gallery #gallery #wrap .loading.off {
+      opacity: 0; }
+  .gallery #gallery #wrap #photoList {
+    width: 100%; }
+    .gallery #gallery #wrap #photoList li {
+      width: calc(100% / 5);
+      margin: 0 auto;
+      padding: 10px; }
+      .gallery #gallery #wrap #photoList li div {
         width: 100%;
-        border-radius: 2px;
-        filter: grayscale(50%); }
-    .gallery #wrap_list #photoList .item:hover {
-      transform: scale(1.1);
-      position: relative;
-      z-index: 2; }
-      .gallery #wrap_list #photoList .item:hover a > img {
-        filter: grayscale(0%); }
+        padding: 20px 10px 50px;
+        border-radius: 8px;
+        background: #eee;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); }
+        .gallery #gallery #wrap #photoList li div a > img {
+          width: 100%;
+          border-radius: 2px;
+          filter: grayscale(50%); }
+      .gallery #gallery #wrap #photoList li:hover {
+        transform: scale(1.1); }
+        .gallery #gallery #wrap #photoList li:hover a > img {
+          filter: grayscale(0%); }
 
 /* ----- header ---------------------------------------------------------*/
 #header {
