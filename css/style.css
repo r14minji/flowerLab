@@ -384,6 +384,7 @@ table {
       .content .sub_visual h1 {
         font: bold 78px/1 'lora'; }
       .content .sub_visual p {
+        width: 65vw;
         font: bold 24px/1.4 'lora';
         top: 49%; }
     .content .inner {
@@ -406,8 +407,8 @@ table {
       .content .sub_visual h1 {
         font: bold 15vw/1 'lora'; }
       .content .sub_visual p {
-        width: 320px;
-        font: bold 4vw/1.4 'lora';
+        width: 65vw;
+        font: bold 6vw/1.4 'lora';
         top: 47%; }
     .content .inner {
       width: 100%;
