@@ -1198,6 +1198,9 @@ aside {
     width: 50%;
     padding: 20px 0px;
     font: bold 16px/1 'noto sans kr'; } }
+.gallery .sub_visual p {
+  font-family: 'Noto Sans KR'; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
