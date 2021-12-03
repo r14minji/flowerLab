@@ -10,7 +10,6 @@ const gnb_lis = document.querySelectorAll("#gnb>li");
 // 반응형 메뉴버튼
 btnCall.addEventListener("click", e=>{
   e.preventDefault();
-  bgMo.classList.toggle("on");
   btnCall.classList.toggle("on");
   menuMo.classList.toggle("on"); 
 })
