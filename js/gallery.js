@@ -4,6 +4,7 @@
 url: https://www.flickr.com/services/rest/?method=flickr.test.echo&name=value
 */
 
+const section = document.querySelector(".gallery");
 const list = document.querySelector("#photoList");
 const searchBox = document.getElementById("searchBox");
 const loading = document.querySelector(".loading");
@@ -21,6 +22,36 @@ const url1 = `https://www.flickr.com/services/rest/?method=${method1}&api_key=${
 
 callData(url1);
 
+//이벤트
+
+list.addEventListener("click", e => {
+  e.preventDefault(); //  반드시 필요함. 넣어야 aside에 사진들어감.
+  let target = e.target.closest(".item").querySelector("img");
+
+
+
+    const imgSrc = target.parentElement.getAttribute("href");
+    const pop = document.createElement("aside");
+      let pops  = `
+      <div class="con">
+      <img src="${imgSrc}" alt="">
+      </div>
+      <div class="txt">
+      <p>title</p>
+      <img src="" alt="">
+      <strong>owner</strong>
+      </div>
+      <span>close</sp>
+    `
+    pop.innerHTML = pops;
+    section.append(pop);
+})
+
+
+
+
+
+//함수
 function callData(url){
 
   fetch(url)
@@ -33,6 +64,10 @@ function callData(url){
     createList(items);
     delayLoading();
   })
+}
+
+function createItems(items){
+  return items;
 }
 
 function createList(items){
@@ -67,6 +102,7 @@ function delayLoading(){
 
 function isoLayout(){
   loading.classList.add("off");
+  list.classList.add("on");
 
   new Isotope("#photoList", {
     itemSelector: ".item",

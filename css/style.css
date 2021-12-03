@@ -1235,7 +1235,13 @@ aside {
     .gallery #gallery #wrap .loading.off {
       opacity: 0; }
   .gallery #gallery #wrap #photoList {
-    width: 100%; }
+    width: 100%;
+    transform: translateY(100px);
+    transition: 1s;
+    opacity: 0; }
+    .gallery #gallery #wrap #photoList.on {
+      transform: translateY(0px);
+      opacity: 1; }
     .gallery #gallery #wrap #photoList li {
       width: calc(100% / 5);
       margin: 0 auto;
