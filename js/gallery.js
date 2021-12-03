@@ -5,7 +5,9 @@ url: https://www.flickr.com/services/rest/?method=flickr.test.echo&name=value
 */
 
 const list = document.querySelector("#photoList");
-
+const searchBox = document.getElementById("searchBox");
+const loading = document.querySelector(".loading");
+const errMsg = document.querySelector(".errMsg");
 
 
 const api_key = "e876201effa30e353ec16d8c4b313899";
@@ -20,21 +22,21 @@ const url1 = `https://www.flickr.com/services/rest/?method=${method1}&api_key=${
 callData(url1);
 
 function callData(url){
+
   fetch(url)
   .then(data => {
     return data.json();
   })
   .then(json => {
     let items = json.photos.photo;
-
+    console.log(json);
     createList(items);
-    DelayLoading();
+    delayLoading();
   })
 }
 
 function createList(items){
   let htmls = "";
-
   items.forEach( item => {
     
     htmls += `
@@ -43,6 +45,7 @@ function createList(items){
       <a href="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg">
         <img src="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg" alt="${item.title}">
       </a>  
+      <p></p>  
     </div>
   </li>
     `
@@ -50,7 +53,7 @@ function createList(items){
   list.innerHTML = htmls;
 }
 
-function DelayLoading(){
+function delayLoading(){
   const imgs = document.querySelectorAll("img");
   let count = 0;
   for(let el of imgs){
@@ -59,10 +62,12 @@ function DelayLoading(){
     
       if(count === imgs.length) isoLayout();
     }
-  }
+  };
 }
 
 function isoLayout(){
+  //loading.classList.add("off");
+
   new Isotope("#photoList", {
     itemSelector: ".item",
     columnWidth: ".item",
