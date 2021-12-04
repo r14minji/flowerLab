@@ -4,7 +4,7 @@
 url: https://www.flickr.com/services/rest/?method=flickr.test.echo&name=value
 */
 
-const section = document.querySelector(".gallery");
+const body = document.querySelector("body");
 const list = document.querySelector("#photoList");
 const searchBox = document.getElementById("searchBox");
 const loading = document.querySelector(".loading");
@@ -28,22 +28,19 @@ callData(url1);
 
 list.addEventListener("click", e => {
   e.preventDefault(); //  반드시 필요함. 넣어야 aside에 사진들어감.
-  let target = e.target.closest(".item").querySelector("img");
+  let target = e.target.closest(".item").querySelector(".thumb");
 
-  const popTxt = e.target.closest(".item").querySelector(".txt");
-  popTxt.style.display = "block";
 
     const imgSrc = target.parentElement.getAttribute("href");
     const pop = document.createElement("aside");
-      let pops  = `
-      <div class="con">
-        <img src="${imgSrc}" alt="">
-      </div>
-      <span>close</span>
+    let pops  = `
+    <div class="con">
+      <img src="${imgSrc}" alt="">
+    </div>
+    <span>close</span>
     `
     pop.innerHTML = pops;
-    section.append(pop);
-
+    body.append(pop);
 })
 
 
@@ -71,19 +68,19 @@ function createList(items){
   items.forEach( item => {
 
     let title = item.title;
-    if(title.length > 10){
-      title = title.substr(0,10);
+    if(title.length >17){
+      title = title.substr(0,17);
     }
 
     htmls += `
     <li class="item">
     <div>
       <a href="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_b.jpg">
-        <img src="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg" alt="${item.title}" class="thumb">
+        <img src="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg" class="thumb">
       </a>
-      <p>${title}</p>
-      <img src="https://www.flickr.com/images/buddyicon.gif" class="profile">
-      <strong>${item.owner}</strong>
+        <p>${title}</p>
+        <img src="https://www.flickr.com/images/buddyicon.gif" class="profile">
+        <strong>${item.owner}</strong>
     </div>
   </li>
     `
@@ -100,6 +97,8 @@ function delayLoading(){
     
       if(count === imgs.length) isoLayout();
     }
+
+    
   };
 }
 
