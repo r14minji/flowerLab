@@ -1355,6 +1355,9 @@ aside {
 @media screen and (max-width: 420px) {
   .gallery #gallery #wrap #photoList li {
     width: calc(100% / 1); } }
+.about .sub_visual p {
+  font-family: 'Noto Sans KR'; }
+
 /* ----- header ---------------------------------------------------------*/
 #header {
   width: 100%;
