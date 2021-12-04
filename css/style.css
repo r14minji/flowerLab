@@ -1224,7 +1224,8 @@ aside {
     border-radius: 5px;
     cursor: pointer; }
 .gallery #gallery #wrap {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   .gallery #gallery #wrap .loading {
     width: 100px;
     position: fixed;
@@ -1234,6 +1235,8 @@ aside {
     transition: 1s; }
     .gallery #gallery #wrap .loading.off {
       opacity: 0; }
+  .gallery #gallery #wrap .errMsg.off {
+    display: none; }
   .gallery #gallery #wrap #photoList {
     width: 100%;
     transform: translateY(100px);
