@@ -27,7 +27,7 @@ callData(url1);
 
 section.addEventListener("click", e =>{
   e.preventDefault();
-  console.log(e.target);
+  //console.log(e.target);
   let popup = e.currentTarget.querySelector("aside");
 
   if(popup != null){
@@ -43,9 +43,12 @@ section.addEventListener("click", e =>{
 
 list.addEventListener("click", e => {
   e.preventDefault(); //  반드시 필요함. 넣어야 aside에 사진들어감.
+
+  if(e.target == list) return
+
   let target = e.target.closest(".item").querySelector(".thumb");
 
-
+  if(e.target == target){
     const imgSrc = target.parentElement.getAttribute("href");
     const pop = document.createElement("aside");
     let pops  = `
@@ -57,6 +60,7 @@ list.addEventListener("click", e => {
     pop.innerHTML = pops;
     section.append(pop);
     body.style.overflow = 'hidden';
+  }
 })
 
 
@@ -95,7 +99,7 @@ function createList(items){
         <img src="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg" class="thumb">
       </a>
         <p>${title}</p>
-        <img src="https://www.flickr.com/images/buddyicon.gif" class="profile">
+        <img src="http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg" class="profile">
         <strong>${item.owner}</strong>
     </div>
   </li>
@@ -114,8 +118,16 @@ function delayLoading(){
       if(count === imgs.length) isoLayout();
     }
 
-    
+    const thumb = el.closest(".item").querySelector(".thumb");
+    thumb.onerror  = e => {
+      e.currentTarget.closest("item").querySelector(".thumb").setAttribute("src", "k1.jpg")
+    }
+
+    const profile = el.closest(".item").querySelector(".profile").setAttribute("src", "https://www.flickr.com/images/buddyicon.gif")
   };
+
+
+
 }
 
 function isoLayout(){
