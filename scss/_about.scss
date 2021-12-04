@@ -1,4 +1,21 @@
 
+/* Scroll Animation (sa, 스크롤 애니메이션) */
+.sa{
+  opacity: 0; transition: all 500ms ease;
+}
+/* 아래에서 위로 페이드 인 */
+.sa-up {
+  transform: translate(0, 100px);
+}
+/* 커진 상태에서 작아지면서 페이드 인 */
+.sa-scaleDown {
+  transform: scale(1.5);
+}
+
+.sa.show {  
+  opacity: 1;  transform: none;
+}
+
 section {
   width: 100%;
   position: relative;
@@ -23,7 +40,6 @@ section {
       font: normal 18px/1.5 'noto sans';
     }
   }
-
 
   &.title{
     height: 100vh;
@@ -109,4 +125,5 @@ section {
 
     }
   }
+
 }

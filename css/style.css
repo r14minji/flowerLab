@@ -288,7 +288,7 @@ table {
       left: 5vw;
       z-index: 1;
       transform: translateY(60px);
-      animation: up 1s linear forwards;
+      animation: up 550ms linear forwards;
       text-shadow: 0px 1px 1px white;
       opacity: 0; }
     .content .sub_visual p {
@@ -298,7 +298,7 @@ table {
       top: 50%;
       left: 5vw;
       transform: translateY(60px);
-      animation: up 1s linear forwards;
+      animation: up 550ms linear forwards;
       animation-delay: 1s;
       text-shadow: 0px 1px 1px white;
       opacity: 0; }
@@ -1355,6 +1355,23 @@ aside {
 @media screen and (max-width: 420px) {
   .gallery #gallery #wrap #photoList li {
     width: calc(100% / 1); } }
+/* Scroll Animation (sa, 스크롤 애니메이션) */
+.sa {
+  opacity: 0;
+  transition: all 500ms ease; }
+
+/* 아래에서 위로 페이드 인 */
+.sa-up {
+  transform: translate(0, 100px); }
+
+/* 커진 상태에서 작아지면서 페이드 인 */
+.sa-scaleDown {
+  transform: scale(1.5); }
+
+.sa.show {
+  opacity: 1;
+  transform: none; }
+
 section {
   width: 100%;
   position: relative;
