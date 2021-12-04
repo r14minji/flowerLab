@@ -115,8 +115,9 @@ aside{
     }
   }
   span{
-    position: absolute; top:0; right: 0;
+    position: absolute; top:30px; right: 30px;
     font: normal 16px/1 'noto sans';
     color: orange;
+    cursor: pointer;
   }
 }

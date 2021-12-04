@@ -5,6 +5,7 @@ url: https://www.flickr.com/services/rest/?method=flickr.test.echo&name=value
 */
 
 const body = document.querySelector("body");
+const section = document.querySelector(".gallery");
 const list = document.querySelector("#photoList");
 const searchBox = document.getElementById("searchBox");
 const loading = document.querySelector(".loading");
@@ -24,6 +25,20 @@ callData(url1);
 
 //이벤트
 
+section.addEventListener("click", e =>{
+  e.preventDefault();
+  console.log(e.target);
+  let popup = e.currentTarget.querySelector("aside");
+
+  if(popup != null){
+    const btnClose = popup.querySelector("span");
+    
+    if(e.target == btnClose){
+      popup.remove();
+      body.style.overflow = 'auto';
+    }
+  }
+})
 
 
 list.addEventListener("click", e => {
@@ -40,7 +55,8 @@ list.addEventListener("click", e => {
     <span>close</span>
     `
     pop.innerHTML = pops;
-    body.append(pop);
+    section.append(pop);
+    body.style.overflow = 'hidden';
 })
 
 
