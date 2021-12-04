@@ -1,9 +1,3 @@
-/*
-키 : e876201effa30e353ec16d8c4b313899
-
-url: https://www.flickr.com/services/rest/?method=flickr.test.echo&name=value
-*/
-
 const body = document.querySelector("body");
 const section = document.querySelector(".gallery");
 const list = document.querySelector("#photoList");
@@ -22,8 +16,8 @@ const format = "json";
 
 const url1 = `https://www.flickr.com/services/rest/?method=${method1}&api_key=${api_key}&user_id=${user_id}&per_page=${per_page}&format=${format}&nojsoncallback=1`;
 
-
 callData(url1);
+window.onload = callData(url1);
 
 // 검색어로 이미지 찾기
 btn.addEventListener("click", e=>{
@@ -35,7 +29,7 @@ btn.addEventListener("click", e=>{
     callData(url2);
     errMsg.style.display = "none";
   }else{
-    errMsg.innerText = "검색어를 입력하세요";
+    errMsg.innerText = "검색어를 입력하세요.";
     errMsg.style.display = "block";
     list.classList.remove("on");
   }
@@ -60,22 +54,6 @@ input.addEventListener("keyup", e =>{
 })
 
 
-//팝업창 닫기
-section.addEventListener("click", e =>{
-  e.preventDefault();
-  //console.log(e.target);
-  let popup = e.currentTarget.querySelector("aside");
-
-  if(popup != null){
-    const btnClose = popup.querySelector("span");
-    
-    if(e.target == btnClose){
-      popup.remove();
-      body.style.overflow = 'auto';
-    }
-  }
-})
-
 //이미지 팝업창으로 보기
 list.addEventListener("click", e => {
   e.preventDefault(); //  반드시 필요함. 넣어야 aside에 사진들어감.
@@ -98,6 +76,23 @@ list.addEventListener("click", e => {
     body.style.overflow = 'hidden';
   }
 })
+
+
+//팝업창 닫기
+section.addEventListener("click", e =>{
+  e.preventDefault();
+  //console.log(e.target);
+  let popup = e.currentTarget.querySelector("aside");
+
+  if(popup != null){
+    const btnClose = popup.querySelector("span");
+    if(e.target == btnClose){
+      popup.remove();
+      body.style.overflow = 'auto';
+    }
+  }
+})
+
 
 
 //함수만들기
@@ -143,7 +138,7 @@ function createList(items){
         <img src="https://live.staticflickr.com/${item.server}/${item.id}_${item.secret}_m.jpg" class="thumb">
       </a>
         <p>${title}</p>
-        <img src="http://farm${item.farm}.staticflickr.com/${item.server}/buddyicons/${item.owner}.jpg" class="profile">
+        <img src="http://www.flickr.com/buddyicons/${item.owner}.jpg" class="profile">
         <strong>${item.owner}</strong>
     </div>
   </li>
