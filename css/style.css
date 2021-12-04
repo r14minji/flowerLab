@@ -1373,11 +1373,10 @@ section {
       margin-bottom: 20px; }
     section .inner span {
       font: normal 18px/1.5 'noto sans'; }
-  section:nth-of-type(5) {
-    height: 60vh;
-    background: lightpink; }
   section.title {
     height: 100vh; }
+    section.title .sub_visual .subPic {
+      background: url(../img/sub6.jpg) no-repeat center/cover; }
     section.title .sub_visual p {
       font-family: 'Noto Sans KR'; }
   section.who .inner {
@@ -1389,9 +1388,11 @@ section {
       left: 72px;
       z-index: 2; }
     section.who .inner img {
+      flex-grow: 1;
       margin-top: 90px;
       width: 100%;
-      height: 500px; }
+      height: 500px;
+      filter: brightness(12.5); }
     section.who .inner span {
       margin: 20px 0;
       display: block;
@@ -1404,19 +1405,19 @@ section {
     justify-content: center; }
   section.what .inner {
     padding: 0px 30px;
-    margin-bottom: 40px;
-    height: 100vh; }
+    margin-bottom: 40px; }
     section.what .inner .wrap {
       width: 100%;
       height: 100%;
       display: flex;
       justify-content: space-around;
-      align-items: center; }
+      align-items: center;
+      padding-bottom: 50px; }
       section.what .inner .wrap article {
         width: 260px;
         height: 340px;
         background: #ccc;
-        transform: rotateY(200deg) translateY(100px);
+        transform: rotateY(200deg) translateY(50px);
         transition: 600ms; }
         section.what .inner .wrap article img {
           width: 100%;
@@ -1424,8 +1425,13 @@ section {
         section.what .inner .wrap article.on article {
           opacity: 1;
           transform: roateY(0deg) translateY(0px); }
-  section.how {
-    height: 100vh; }
+  section.how .inner {
+    padding-bottom: 20px; }
+    section.how .inner .vid {
+      margin-top: 30px;
+      width: 100%;
+      height: 500px;
+      border: 1px solid #000; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {
