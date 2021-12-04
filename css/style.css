@@ -1198,6 +1198,8 @@ aside {
     width: 50%;
     padding: 20px 0px;
     font: bold 16px/1 'noto sans kr'; } }
+.gallery .sub_visual .subPic {
+  background: url(../img/sub5.jpg) no-repeat center/cover; }
 .gallery .sub_visual p {
   font-family: 'Noto Sans KR'; }
 
