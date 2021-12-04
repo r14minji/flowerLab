@@ -1355,8 +1355,77 @@ aside {
 @media screen and (max-width: 420px) {
   .gallery #gallery #wrap #photoList li {
     width: calc(100% / 1); } }
-.title .sub_visual p {
-  font-family: 'Noto Sans KR'; }
+section {
+  width: 100%;
+  position: relative;
+  perspective: 700px; }
+  section .inner {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 80px 0 30px; }
+    section .inner h2 {
+      font: bold 16px/1 'noto sans kr';
+      color: orange;
+      margin: 100px 0 20px; }
+    section .inner h3 {
+      font: bold 52px/1.2 'noto sans';
+      color: #000;
+      margin-bottom: 20px; }
+    section .inner span {
+      font: normal 18px/1.5 'noto sans'; }
+  section:nth-of-type(5) {
+    height: 60vh;
+    background: lightpink; }
+  section.title {
+    height: 100vh; }
+    section.title .sub_visual p {
+      font-family: 'Noto Sans KR'; }
+  section.who .inner {
+    padding: 0px 30px; }
+    section.who .inner h3 {
+      margin-top: 20px;
+      position: absolute;
+      top: 10px;
+      left: 72px;
+      z-index: 2; }
+    section.who .inner img {
+      margin-top: 90px;
+      width: 100%;
+      height: 500px; }
+    section.who .inner span {
+      margin: 20px 0;
+      display: block;
+      text-align: right; }
+  section.purpose .inner {
+    padding: 50px 30px; }
+  section.purpose .pic {
+    margin: 35px 0;
+    display: flex;
+    justify-content: center; }
+  section.what .inner {
+    padding: 0px 30px;
+    margin-bottom: 40px;
+    height: 100vh; }
+    section.what .inner .wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      section.what .inner .wrap article {
+        width: 260px;
+        height: 340px;
+        background: #ccc;
+        transform: rotateY(200deg) translateY(100px);
+        transition: 600ms; }
+        section.what .inner .wrap article img {
+          width: 100%;
+          height: 100%; }
+        section.what .inner .wrap article.on article {
+          opacity: 1;
+          transform: roateY(0deg) translateY(0px); }
+  section.how {
+    height: 100vh; }
 
 /* ----- header ---------------------------------------------------------*/
 #header {
