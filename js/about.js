@@ -22,9 +22,10 @@ const saElementList = document.querySelectorAll('.sa');
 
 
 const saFunc =()=>{
+
   for (const el of saElementList) {
+
     if (!el.classList.contains('show')) {
-      console.log(dataset.saTrigger);
       if(el.dataset.saTrigger){
         saTriggerHeight = document.querySelector(el.dataset.saTrigger).getBoundingClientRect().top + saTriggerMargin;
       }else{

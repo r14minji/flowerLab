@@ -57,16 +57,17 @@ section {
   &.who{
     .inner{
       padding: 0px 30px;
-
+      position: relative;
       h3{
         margin-top: 20px;
-        position: absolute; top: 10px ; left: 72px; z-index: 2;
+        position: absolute; top: 10px ; left:0; z-index: 2;
+        padding: 0 30px;
       }
       img{
         flex-grow: 1;
         margin-top: 90px;
         width: 100%; height: 500px;
-        filter: brightness(12.5);
+        filter: brightness(3);
       }
       span{
         margin: 20px 0;
@@ -97,10 +98,8 @@ section {
         display: flex; justify-content: space-around; align-items: center;  
         padding-bottom: 50px;
         article{
-          width: 260px; height: 340px; background: #ccc;
-          //opacity: 0; 
-          transform: rotateY(200deg) translateY(50px); 
-          transition: 600ms;
+          width: 180px; height: 230px; 
+
 
           img{ width: 100%; height: 100%;}
 

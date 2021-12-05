@@ -1397,19 +1397,21 @@ section {
     section.title .sub_visual p {
       font-family: 'Noto Sans KR'; }
   section.who .inner {
-    padding: 0px 30px; }
+    padding: 0px 30px;
+    position: relative; }
     section.who .inner h3 {
       margin-top: 20px;
       position: absolute;
       top: 10px;
-      left: 72px;
-      z-index: 2; }
+      left: 0;
+      z-index: 2;
+      padding: 0 30px; }
     section.who .inner img {
       flex-grow: 1;
       margin-top: 90px;
       width: 100%;
       height: 500px;
-      filter: brightness(12.5); }
+      filter: brightness(3); }
     section.who .inner span {
       margin: 20px 0;
       display: block;
@@ -1431,11 +1433,8 @@ section {
       align-items: center;
       padding-bottom: 50px; }
       section.what .inner .wrap article {
-        width: 260px;
-        height: 340px;
-        background: #ccc;
-        transform: rotateY(200deg) translateY(50px);
-        transition: 600ms; }
+        width: 180px;
+        height: 230px; }
         section.what .inner .wrap article img {
           width: 100%;
           height: 100%; }
